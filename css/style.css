@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --anyar: #17a2b8;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -19,7 +20,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #17a2b8;
+  --primary: #333399;
   --secondary: #00394f;
   --success: #28a745;
   --info: #17a2b8;
@@ -527,8 +528,9 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  will-change: auto;
+
 }
 
 .img-thumbnail {
@@ -602,6 +604,7 @@ pre code {
 .container-lg,
 .container-xl {
   width: 100%;
+  padding: 20px 0px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -2373,13 +2376,13 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #fff;
   background-color: #333399;
-  border-color: #17a2b8;
+  border-color: #333399;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #138496;
-  border-color: #117a8b;
+  background-color: #343a40;
+  border-color: #333399;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2409,14 +2412,14 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #00394f;
-  border-color: #00394f;
+  background-color: #333399;
+  border-color: #333399;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #001d29;
-  border-color: #00141c;
+  background-color: #343a40;
+  border-color: #333399;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -4105,7 +4108,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+
 }
 
 .navbar .container,
@@ -6355,9 +6358,7 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
-.bg-primary {
-  background-color: #17a2b8 !important;
-}
+
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -9521,12 +9522,18 @@ button.bg-dark:focus {
   font-style: italic !important;
 }
 
-.text-white {
-  color: #fff !important;
+.header-text p {
+  color: #171a1d;
 }
 
+.text-white {
+  color: #333399 !important;
+}
+
+
+
 .text-primary {
-  color: #17a2b8 !important;
+  color: #333399 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9719,7 +9726,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: inline-block;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #17a2b8;
+  color: #333399;
 }
 
 .section-title span {
@@ -9735,7 +9742,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #17a2b8;
+  background: #333399;
 }
 
 [class^=flaticon-]:before,
@@ -9772,7 +9779,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #17a2b8;
+  color: #333399;
 }
 
 @media (max-width: 991.98px) {
@@ -9841,6 +9848,7 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
+
 .testimonial-carousel .owl-dots {
   margin-top: 30px;
   text-align: center;
@@ -9864,3 +9872,19 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
   list-style-type: none;
 }
+
+.img-bg {
+  z-index: 1;
+  width: 100%;
+  
+ padding-bottom: 120px;
+}
+
+.navbar {
+  z-index: 3;
+}
+
+* {
+  z-index: 2;
+}
+
