@@ -32,6 +32,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
     <!--logo title-->
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
     <title>Sunrise Offset Printing</title>
@@ -39,132 +40,56 @@
   </head>
 
   <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-light  position-relative shadow navbar-brand">
-      <nav
-        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
-      >
+ <!-- Navbar Start -->
+ <div class="container-fluid bg-light  position-relative shadow navbar-brand">
+  <nav
+    class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+  >
 
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/logo2.png" alt="" width="100" ></a>
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/logo2.png" alt="" width="100" ></a>
 
 
-        <button
-          type="button"
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarCollapse"
-        >
-          <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.php" class="nav-item nav-link active">Home</a>
-            <a href="service.php" class="nav-item nav-link">Service</a>
-            <a href="alat.php" class="nav-item nav-link">Alat</a>
-            <a href="penawaran.php" class="nav-item nav-link">Penawaran Harga</a>
-            <a href="kontak.php" class="nav-item nav-link">Kontak</a>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbarCollapse"
+    >
+      <div class="navbar-nav font-weight-bold mx-auto py-0">
+        <a href="index.php" class="nav-item nav-link">Home</a>
+        <a href="service.php" class="nav-item nav-link active">Service</a>
+        <a href="alat.php" class="nav-item nav-link">Alat</a>
+        <a href="penawaran.php" class="nav-item nav-link">Penawaran Harga</a>
+        <a href="kontak.php" class="nav-item nav-link">Kontak</a>
 
-          </div>
-          <a href="login.php" class="btn btn-primary px-4">Login</a>
-        </div>
-      </nav>
+      </div>
+
     </div>
-    <!-- Navbar End -->
+  </nav>
+</div>
+<!-- Navbar End -->
 
     <!-- Header Start -->
-    <div class="container-fluid px-0 mb-5">
-      <div class="row align-items-center px-3">
-        <div class="col-lg-6 text-center text-lg-left px-md-5">
-          <h1 class="display-3 font-weight-bold text-white">
-            Design Production Quality Control
-          </h1>
-          <p class="mb-4">
-            Our teams are consists of many talented individu make efforts to give the best output.
-          </p>
-          <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
-        </div>
-          <img src="assets/img/background-01.png" alt="" class="img-bg h-100 position-absolute top-0" />
+    <div class="container-fluid bg-primary mb-5">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="min-height: 400px"
+      >
+        <h3 class="display-3 font-weight-bold text-white">Packaging Product</h3>
 
-        <div class="col-lg-6 text-center text-lg-right">
-          
-          <img class="img-fluid mt-3" src="assets/img/bga-01.png" alt="" />
-          
-        </div>
-        
       </div>
     </div>
     <!-- Header End -->
 
-    <!-- Facilities Start -->
+    <!-- Blog Start -->
     <div class="container-fluid pt-5">
-      <div class="container pb-3">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-
-              <i
-              
-                class=" h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Produksi Cepat & Kualitas Tinggi</h4>
-                <p class="m-0">
-                  Kami telah berada di industri jasa percetakan selama lebih dari 20 tahun. Tidak hanya layanan cetak kami memiliki kualitas cetak yang luar biasa , tapi kami juga menawarkan harga terbaik.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Offset Print tersedia</h4>
-                <p class="m-0">
-                  Percetakan kami dapat mengakomodasi pekerjaan besar atau kecil . Kami bisa melakukan digital printing dan offset untuk memenuhi kebutuhan pencetakan Anda. Harga dan kualitas tinggi dan harga ekonomis kami dapat membantu Anda beriklan tanpa melanggar bank .
-                </p>
-              </div>
-            </div>
-          </div>
-         
-         
-          
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px" 
-            >
-              <i
-                class="h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
-                <h4>Designer tersedia</h4>
-                <p class="m-0">
-                  Tidak tahu harus mulai dari mana? Siapa Takut. Kami memiliki desainer untuk membantu Anda membuat pilihan desain untuk semua jenis materi promosi dari kartu nama hingga brosur.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Facilities Start -->
-
-   
-
-<!-- Blog Start -->
-<div class="container-fluid pt-5">
   <div class="container">
     <div class="text-center pb-2">
       <p class="section-title px-5">
@@ -177,6 +102,60 @@
       <div class="col-lg-4 mb-4">
         <div class="card border-0 shadow-sm mb-2">
           <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Diam amet eos at no eos</h4>
+
+            <p>
+              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+              lorem. Tempor ipsum justo amet stet...
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 ">
+        
+        <div class=" card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Diam amet eos at no eos</h4>
+
+            <p>
+              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+              lorem. Tempor ipsum justo amet stet...
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 ">
+        
+        <div class=" card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
+          <div class="card-body bg-light text-center p-4">
+            <h4 class="">Diam amet eos at no eos</h4>
+
+            <p>
+              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+              lorem. Tempor ipsum justo amet stet...
+            </p>
+            <a href="" class="btn btn-primary px-4 mx-auto my-2"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4 ">
+        
+        <div class=" card border-0 shadow-sm mb-2">
+          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
           <div class="card-body bg-light text-center p-4">
             <h4 class="">Diam amet eos at no eos</h4>
 
@@ -230,48 +209,7 @@
   </div>
   
 </div>
-<!-- Blog End -->
-    
-
-    <!-- Our CLient start-->
-    <div class="container-fluid py-5">
-      <div class="container p-0">
-        <div class="text-center pb-2">
-          <p class="section-title px-5">
-            <span class="px-2">Our</span>
-          </p>
-          <h1 class="mb-4">Client</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel">
-
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
-
-
-      </div>
-    </div>
-    <!-- Our Client End -->
-
-    
+    <!-- Blog End -->
 
     <!-- Footer Start -->
     <div

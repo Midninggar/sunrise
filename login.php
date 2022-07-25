@@ -38,10 +38,6 @@
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
     <title>Sunrise Offset Printing</title>
 
-  </head>
-
-  <body style="background-image: url('assets/img/background-01.png'); background-size:cover">
-
     <?php
 $pesan="";
 
@@ -72,7 +68,7 @@ $pesan="";
                 $_SESSION["username"]=$row["username"];
                 
                 //Redirect ke halaman admin
-                header("Location:admin/index.php");
+                header("Location:admin/index.php?halaman=kategori");
 
             }else {
                     $pesan="<div class='alert alert-warning'><strong>Gagal!</strong> Status pengguna tidak aktif.</div>";
@@ -84,46 +80,70 @@ $pesan="";
     }      
 ?>
 
+  </head>
+
+  <body style="background-image: url('assets/img/background-01.png'); background-size:cover">
+
+   
+
 
 
     <!-- Contact Start -->
-    <div class="container-fluid" style="margin-top: 200px;">
-      <div class="card w-50">
-        <div class="text-center pb-2">
+    <section class="vh-100" >
+  <div class="container py-5 h-100">
 
-          <h1 class="mb-4">Login</h1>
-        </div>
-        <div class="d-flex justify-content-center text-center row">
+  <?php 	if ($_SERVER["REQUEST_METHOD"] == "POST") echo $pesan; ?>
+    <?php 	if(isset($_GET['pesan'])){ if ($_GET["pesan"] == "login_dulu") echo "<div class='alert alert-danger'>Anda harus login dulu</div>"; }?>
 
-               
-               
-            <div class="col-md-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-8">
+        <div class="card" style="border-radius: 2rem;">
+          <div class="row g-0">
+
+            <div class="col d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
                 <form action="" method="post">
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" class="form-control" name="username" placeholder="Masukan username">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" name="password" class="form-control" placeholder="Masukan password">
-                    </div>
 
-                <div>
-                  <button
-                    class="btn btn-primary py-2 px-4"
-                    type="submit"
-                    id="sendMessageButton"
-                  >
-                    Login
-                  </button>
-                </div>
-              </form>
-              
+                  <div class="d-flex justify-content-center align-items-center pb-5">
+                  <a class="logo" href="index.php">
+                    <img src="assets/img/logo2.png" alt="" width="200" ></a>
+                    
+                  
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3 text-center" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                  <div class="form-outline text-center">
+                  <label class="form-label" for="username">Username</label>
+                    <input type="text" name="username" class="form-control text-center form-control-lg mb-3" placeholder="Masukan username" />
+                    
+                  </div>
+
+                  <div class="form-outline mb-4 text-center">
+                  <label class="form-label" for="pwd">Password</label>
+                    <input type="password" name="password" class="form-control text-center form-control-lg mb-5 " placeholder="Masukan password" />
+                    
+                  </div>
+
+                  <div class="pt-1 mb-3 text-center">
+                    <button class="btn btn-secondary w-100 mt-1 py-3 px-5" type="submit">Login</button>
+                  </div>
+
+
+
+                </form>
+
+                
+
+              </div>
             </div>
-            
           </div>
-          </div>
-          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
           
         
 

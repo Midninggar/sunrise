@@ -41,39 +41,40 @@
   <body>
  <!-- Navbar Start -->
  <div class="container-fluid bg-light  position-relative shadow navbar-brand">
-    <nav
-      class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+  <nav
+    class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+  >
+
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/logo2.png" alt="" width="100" ></a>
+
+
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
     >
-  
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo2.png" alt="" width="100" ></a>
-  
-  
-      <button
-        type="button"
-        class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="collapse navbar-collapse justify-content-between"
-        id="navbarCollapse"
-      >
-        <div class="navbar-nav font-weight-bold mx-auto py-0">
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="service.html" class="nav-item nav-link">Service</a>
-          <a href="class.html" class="nav-item nav-link">Alat</a>
-          <a href="penawaran.html" class="nav-item nav-link active">Penawaran Harga</a>
-          <a href="contact.html" class="nav-item nav-link">Kontak</a>
-  
-        </div>
-        <a href="" class="btn btn-primary px-4">Login</a>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbarCollapse"
+    >
+      <div class="navbar-nav font-weight-bold mx-auto py-0">
+        <a href="index.php" class="nav-item nav-link">Home</a>
+        <a href="service.php" class="nav-item nav-link">Service</a>
+        <a href="alat.php" class="nav-item nav-link">Alat</a>
+        <a href="penawaran.php" class="nav-item nav-link">Penawaran Harga</a>
+        <a href="kontak.php" class="nav-item nav-link active">Kontak</a>
+
       </div>
-    </nav>
-  </div>
-  <!-- Navbar End -->
+
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary mb-5">
@@ -81,8 +82,8 @@
         class="d-flex flex-column align-items-center justify-content-center"
         style="min-height: 400px"
       >
-        <h3 class="display-3 font-weight-bold text-white">Penawaran Harga</h3>
-
+        <h3 class="display-3 font-weight-bold text-white">Alamat Kami</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.4659407739279!2d112.7195221350198!3d-7.256342198625545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f94ddb02a3a3%3A0xb77a31e0e5dffd18!2sSun%20Rise%20Motor%20Tidar!5e0!3m2!1sid!2sid!4v1658565936705!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     <!-- Header End -->
@@ -94,7 +95,7 @@
           <p class="section-title px-5">
             <span class="px-2">Get In Touch</span>
           </p>
-          <h1 class="mb-4">Form Penawaran</h1>
+          <h1 class="mb-4">Contact Us</h1>
         </div>
         <div class="row">
           <div class="col-lg-7 mb-5">
@@ -179,8 +180,6 @@
               </form>
             </div>
           </div>
-
-          
           <div class="col-lg-5 mb-5">
             <p>
               Memiliki permintaan khusus atau tidak menemukan jasa percetakan yang Anda inginkan? Lengkapi form tentang spesifikasi produk yang anda inginkan dan kita akan kembali ke anda dengan info penawaran harga dan kesediaan jasa kami.

@@ -4,44 +4,47 @@
         header('Location:../index.php?halaman=login&pesan=login_dulu');
   }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Halaman Adminstrartor</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+<title>Sunrise Offset Printing</title>
+<!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+rel="stylesheet"
+/>
+
+
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.min.css">
+    <script src="../js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
-<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #00BFA6">
-    <!-- Brand -->
-    <?php
-        include '../config/database.php';
-        $ambil_kategori = mysqli_query ($kon,"select * from profil limit 1");
-        $row = mysqli_fetch_assoc($ambil_kategori); 
-        $nama_website = $row['nama_website'];
-        $copy_right = $row['nama_website'];
-    ?>
-    <a class="navbar-brand" href="../index.php"><?php echo $nama_website; ?> </a>
+<div class="container-fluid bg-light  position-relative shadow navbar-brand"> 
+<nav
+        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+      >
 
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+      <a class="logo justify-content-center mb-4" href="#">
+        <img src="../assets/img/logo2.png" alt="" width="200" ></a>
 
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav  ml-auto">
-        <li class="text-light">Login Sebagai :  <?php echo $_SESSION["nama_pengguna"]; ?> </li>
-        </ul>
-    </div>
-   
+
 </nav>
+</div>
+
+
 <div class="jumbotron text-center" >
 <?php 
+include '../config/database.php';
 if(isset($_GET['halaman']) && !isset($_GET['kategori'])){
     $halaman = $_GET['halaman'];
    echo "<h1>".ucwords($halaman)."</h1>";
@@ -58,6 +61,7 @@ if(isset($_GET['halaman']) &&  isset($_GET['kategori'])){
 }
 ?>
 </div>
+
 <div class="container">
     <div class="row"  >
         <div class="col-sm-2">
@@ -65,7 +69,7 @@ if(isset($_GET['halaman']) &&  isset($_GET['kategori'])){
                 <a href="index.php?halaman=kategori" class="list-group-item list-group-item-action text-light" style=" background-color: #00BFA6 ">Produk </a>
                 <a href="index.php?halaman=komentar" class="list-group-item list-group-item-action text-light"style=" background-color: #00BFA6 ">Komentar</a>
                 <a href="index.php?halaman=admin" class="list-group-item list-group-item-action text-light"style=" background-color: #00BFA6 ">Admin</a>
-                <a href="index.php?halaman=profil" class="list-group-item list-group-item-action text-light"style=" background-color: #00BFA6 ">Profil</a>
+
                 <a href="logout.php" class="list-group-item list-group-item-action text-light bg-dark">Logout</a>
             </div>
         </div> 
@@ -86,9 +90,6 @@ if(isset($_GET['halaman']) &&  isset($_GET['kategori'])){
                     case 'admin':
                         include "admin/index.php";
                         break;
-                    case 'profil':
-                        include "profil/index.php";
-                        break;
                     default:
                     echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
                     break;
@@ -101,8 +102,12 @@ if(isset($_GET['halaman']) &&  isset($_GET['kategori'])){
     </div>
     <br>
 </div>
-<div class="jumbotron text-center text-light" style="background-color: #00BFA6">
-    <p>Copyright <?php echo  $copy_right; ?> 2020</p>
-</div>
+<div class="container-fluid bg-primary pt-5">
+        <p class="text-center text-white">
+          &copy;
+          <a class="text-light font-weight-bold" href="#">Sunrise Offset Printing</a>.
+          All Rights Reserved.
+        </p>
+      </div>
 </body>
 </html>
