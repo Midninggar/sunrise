@@ -68,7 +68,7 @@ $pesan="";
                 $_SESSION["username"]=$row["username"];
                 
                 //Redirect ke halaman admin
-                header("Location:admin/index.php?halaman=kategori");
+                header("Location:admin/index.php");
 
             }else {
                     $pesan="<div class='alert alert-warning'><strong>Gagal!</strong> Status pengguna tidak aktif.</div>";
@@ -116,14 +116,19 @@ $pesan="";
 
                   <div class="form-outline text-center">
                   <label class="form-label" for="username">Username</label>
-                    <input type="text" name="username" class="form-control text-center form-control-lg mb-3" placeholder="Masukan username" />
+                    <input type="text" name="username" class="form-control text-center form-control-lg mb-3" style="border-radius: 2rem;" placeholder="Masukan username" />
                     
                   </div>
 
                   <div class="form-outline mb-4 text-center">
                   <label class="form-label" for="pwd">Password</label>
-                    <input type="password" name="password" class="form-control text-center form-control-lg mb-5 " placeholder="Masukan password" />
+                    <input type="password" name="password" class="form-control text-center form-control-lg mb-5 " style="border-radius: 2rem;" placeholder="Masukan password" />
                     
+                  </div>
+
+                  <div class="form-check form-switch d-flex align-items-center mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                    <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
                   </div>
 
                   <div class="pt-1 mb-3 text-center">

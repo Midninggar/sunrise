@@ -76,6 +76,8 @@
 </div>
 <!-- Navbar End -->
 
+
+
     <!-- Header Start -->
     <div class="container-fluid bg-primary mb-5">
       <div
@@ -88,6 +90,8 @@
     </div>
     <!-- Header End -->
 
+
+
     <!-- Blog Start -->
     <div class="container-fluid pt-5">
   <div class="container">
@@ -98,117 +102,48 @@
       <h1 class="mb-4">Product</h1>
     </div>
 
-    <div class=" row pb-3 ">
-      <div class="col-lg-4 mb-4">
-        <div class="card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
 
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 ">
-        
-        <div class=" card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
+    <div class="row pb-3">
+<?php
+         
+    include 'config/database.php';
+    if (isset($_GET['kategori'])) {
+        $sql="select * from produk where status=1 and id_kategori=".$_GET['kategori']." order by id_produk desc";
+    }else {
+        $sql="select * from produk where status=1 order by id_produk desc";
+    }
 
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 ">
-        
-        <div class=" card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
+    
+    $hasil=mysqli_query($kon,$sql);
+    $jumlah = mysqli_num_rows($hasil);
+    if ($jumlah>0){
+        while ($data = mysqli_fetch_array($hasil)):
+    ?>
 
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 ">
-        
-        <div class=" card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
+  <div class="col-lg-4 mb-4">
+  <div class="card border-0 shadow-sm mb-2">
+      <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="100%" height="200px" class="card-img-top" alt="Gambar tidak ditemukan"></a>
 
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
+        <div class="card-body bg-light text-center p-4">
+          <h5 class="card-title"><?php echo $data['judul_produk'];?></h5>
+          <p class="card-text"><?php 
+                          $ambil=$data["deskripsi"];
+                          $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
+                          echo substr($panjang, 0, 100);?></p>
+                          <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn btn-primary px-4 mx-auto my-2" role="button">Selengkapnya</a>
         </div>
-      </div>
-      <div class="col-lg-4 mb-4 ">
-        
-        <div class=" card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
-
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
-
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
     </div>
+    </div>
+    <?php 
+            endwhile;
+        }else {
+            echo "<div class='alert alert-warning'> Tidak ada artikel pada kategori ini.</div>";
+        };
+        ?>
+    </div>
+    </div>
+  </div>  
   </div>
-  
-</div>
     <!-- Blog End -->
 
     <!-- Footer Start -->

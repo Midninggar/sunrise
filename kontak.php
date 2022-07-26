@@ -97,129 +97,61 @@
           </p>
           <h1 class="mb-4">Contact Us</h1>
         </div>
-        <div class="row">
-          <div class="col-lg-7 mb-5">
-            <div class="contact-form">
-              <div id="success"></div>
-              <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your Name"
-                    required="required"
-                    data-validation-required-message="Please enter your name"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Your Email"
-                    required="required"
-                    data-validation-required-message="Please enter your email"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phone"
-                    placeholder="Phone"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="company"
-                    placeholder="Company"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="website"
-                    placeholder="Website"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <textarea
-                    class="form-control"
-                    rows="6"
-                    id="message"
-                    placeholder="Message"
-                    required="required"
-                    data-validation-required-message="Please enter your message"
-                  ></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div>
-                  <button
-                    class="btn btn-primary py-2 px-4"
-                    type="submit"
-                    id="sendMessageButton"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
+        <div class="row text-center justify-content-center align-items-center">
+
+          <div class="col-lg-5 mb-5 ">
+
+            <div class="d-flex justify-content-center align-items-center mb-5">
+            <a
+              class="btn btn-primary rounded-circle text-center mr-2 px-0"
+              style="width: 48px; height: 48px"
+              href="#"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-primary rounded-circle text-center mr-2 px-0"
+              style="width: 48px; height: 48px"
+              href="#"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-primary rounded-circle text-center mr-2 px-0"
+              style="width: 48px; height: 48px"
+              href="#"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="btn btn-primary rounded-circle text-center mr-2 px-0"
+              style="width: 48px; height: 48px"
+              href="#"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
-          <div class="col-lg-5 mb-5">
-            <p>
-              Memiliki permintaan khusus atau tidak menemukan jasa percetakan yang Anda inginkan? Lengkapi form tentang spesifikasi produk yang anda inginkan dan kita akan kembali ke anda dengan info penawaran harga dan kesediaan jasa kami.
-            </p>
-            <div class="d-flex">
-              <i
-                class="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
-                style="width: 45px; height: 45px"
-              ></i>
-              <div class="pl-3">
+
+            <div class="d-flex text-center align-items-center justify-content-center">
+
+              <div class="pl">
                 <h5>Address</h5>
                 <p>Jl. Tidar No.290, Surabaya</p>
               </div>
             </div>
-            <div class="d-flex">
-              <i
-                class="fa fa-envelope d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
-                style="width: 45px; height: 45px"
-              ></i>
-              <div class="pl-3">
+            <div class="d-flex text-center align-items-center justify-content-center">
+
+              <div class="pl">
                 <h5>Email</h5>
                 <p>sunriseoffsetprinting@gmail.com</p>
               </div>
             </div>
-            <div class="d-flex">
-              <i
-                class="fa fa-phone-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
-                style="width: 45px; height: 45px"
-              ></i>
-              <div class="pl-3">
+            <div class="d-flex text-center align-items-center justify-content-center">
+
+              <div class="pl">
                 <h5>Phone</h5>
                 <p>031 545 1952</p>
               </div>
             </div>
-            <div class="d-flex">
-              <i
-                class="far fa-clock d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
-                style="width: 45px; height: 45px"
-              ></i>
-              <div class="pl-3">
+            <div class="d-flex text-center align-items-center justify-content-center">
+
+              <div class="pl">
                 <h5>Opening Hours</h5>
                 <strong>Senin - Jumat:</strong>
                 <p class="m-0">08:00 WIB - 17:00 WIB</p>

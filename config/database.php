@@ -2,7 +2,7 @@
     $host="localhost";
     $user="root";
     $password="";
-    $db="websar_db";
+    $db="sunrise_db";
     
     $kon = mysqli_connect($host,$user,$password,$db);
     if (!$kon){
