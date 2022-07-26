@@ -32,6 +32,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--logo title-->
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
     <title>Sunrise Offset Printing</title>
@@ -100,62 +102,43 @@
     <!-- Header End -->
 
     <!-- Facilities Start -->
-    <div class="container-fluid pt-5">
-      <div class="container pb-3 pt-5 ">
+    <div class="container-fluid pt-5" >
+      <div class="container pb-3 pt-5 " >
         <div class="row">
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
 
-              <i
-              
-                class=" h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
+          <div class="col-lg-4 mb-4">
+            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+              <div>
                 <h4>Produksi Cepat & Kualitas Tinggi</h4>
-                <p class="m-0">
+                <p>
                   Kami telah berada di industri jasa percetakan selama lebih dari 20 tahun. Tidak hanya layanan cetak kami memiliki kualitas cetak yang luar biasa , tapi kami juga menawarkan harga terbaik.
                 </p>
-              </div>
+                </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px"
-            >
-              <i
-                class="h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
+
+          <div class="col-lg-4 mb-4">
+            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+              <div>
                 <h4>Offset Print tersedia</h4>
-                <p class="m-0">
-                  Percetakan kami dapat mengakomodasi pekerjaan besar atau kecil . Kami bisa melakukan digital printing dan offset untuk memenuhi kebutuhan pencetakan Anda. Harga dan kualitas tinggi dan harga ekonomis kami dapat membantu Anda beriklan tanpa melanggar bank .
+                <p>
+                Percetakan kami dapat mengakomodasi pekerjaan besar atau kecil . Kami bisa melakukan digital printing dan offset untuk memenuhi kebutuhan pencetakan Anda. Harga dan kualitas tinggi dan harga ekonomis kami dapat membantu Anda beriklan tanpa melanggar bank.
                 </p>
-              </div>
+                </div>
             </div>
           </div>
-         
-         
-          
-          <div class="col-lg-4 col-md-6 pb-1">
-            <div
-              class="d-flex bg-light shadow-sm border-top rounded mb-4"
-              style="padding: 30px" 
-            >
-              <i
-                class="h1 font-weight-normal text-primary mb-3"
-              ></i>
-              <div class="pl-4">
+
+          <div class="col-lg-4 mb-4">
+            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+              <div>
                 <h4>Designer tersedia</h4>
-                <p class="m-0">
-                  Tidak tahu harus mulai dari mana? Siapa Takut. Kami memiliki desainer untuk membantu Anda membuat pilihan desain untuk semua jenis materi promosi dari kartu nama hingga brosur.
+                <p>
+                Tidak tahu harus mulai dari mana? Siapa Takut. Kami memiliki desainer untuk membantu Anda membuat pilihan desain untuk semua jenis materi promosi dari kartu nama hingga brosur.
                 </p>
-              </div>
+                </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

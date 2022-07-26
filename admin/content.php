@@ -1,22 +1,3 @@
-
-
-
-<!--
-=========================================================
-* Material Dashboard 2 - v3.0.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +19,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+
 
     <!--logo title-->
     <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
@@ -65,7 +46,7 @@
 
 <link id="pagestyle" href="../admin/assets/css/material-dashboard.css" rel="stylesheet" />
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -206,102 +187,38 @@
       <h6 class="font-weight-bolder mb-0">content</h6>
       
   </nav>
-    <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-      <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-          
-          
-      </div>
-      <ul class="navbar-nav  justify-content-end">
-        <li class="nav-item d-flex align-items-center">
-          <a href="./pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">
-            <i class="fa fa-user me-sm-1"></i>
-            
-            <span class="d-sm-inline d-none">Sign In</span>
-            
-          </a>
-        </li>
-        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-          <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-            <div class="sidenav-toggler-inner">
-              <i class="sidenav-toggler-line"></i>
-              <i class="sidenav-toggler-line"></i>
-              <i class="sidenav-toggler-line"></i>
-            </div>
-          </a>
-        </li>
-        <li class="nav-item px-3 d-flex align-items-center">
-          <a href="javascript:;" class="nav-link text-body p-0">
-            <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
-          </a>
-        </li>
-        <li class="nav-item dropdown pe-2 d-flex align-items-center">
-          <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-bell cursor-pointer"></i>
-          </a>
-
-          <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-            <li class="mb-2">
-              <a class="dropdown-item border-radius-md" href="javascript:;">
-                <div class="d-flex py-1">
-                  <div class="my-auto">
-                    <img src="./assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                  </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <h6 class="text-sm font-weight-normal mb-1">
-                      <span class="font-weight-bold">New message</span> from Laur
-                    </h6>
-                    <p class="text-xs text-secondary mb-0">
-                      <i class="fa fa-clock me-1"></i>
-                      13 minutes ago
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a class="dropdown-item border-radius-md" href="javascript:;">
-                <div class="d-flex py-1">
-                  <div class="my-auto">
-                    <img src="./assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                  </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <h6 class="text-sm font-weight-normal mb-1">
-                      <span class="font-weight-bold">New album</span> by Travis Scott
-                    </h6>
-                    <p class="text-xs text-secondary mb-0">
-                      <i class="fa fa-clock me-1"></i>
-                      1 day
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item border-radius-md" href="javascript:;">
-                <div class="d-flex py-1">
-                  <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                    <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <title>credit-card</title> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero"> <g transform="translate(1716.000000, 291.000000)"> <g transform="translate(453.000000, 454.000000)"> <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path> <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path> </g> </g> </g> </g> </svg>
-                  </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <h6 class="text-sm font-weight-normal mb-1">
-                      Payment successfully completed
-                    </h6>
-                    <p class="text-xs text-secondary mb-0">
-                      <i class="fa fa-clock me-1"></i>
-                      2 days
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
   </div>
-</nav>
+  </nav>
+    
 
 <!-- End Navbar -->
+
+<?php
+    if (isset($_GET['tambah'])) {
+        //Mengecek nilai variabel tambah 
+        if ($_GET['tambah']=='berhasil'){
+            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di tambahkan!</div>";
+        }else if ($_GET['tambah']=='gagal'){
+            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di tambahkan!</div>";
+        }    
+    }
+    if (isset($_GET['edit'])) {
+        //Mengecek nilai variabel edit 
+        if ($_GET['edit']=='berhasil'){
+            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di edit!</div>";
+        }else if ($_GET['edit']=='gagal'){
+            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di edit!</div>";
+        }    
+      }
+    if (isset($_GET['hapus'])) {
+        //Mengecek nilai variabel hapus 
+        if ($_GET['hapus']=='berhasil'){
+            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di hapus!</div>";
+        }else if ($_GET['hapus']=='gagal'){
+            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di hapus!</div>";
+        }    
+    }
+    ?>
 
 <!-- Table Start -->
 <div class="container-fluid py-4">
@@ -319,21 +236,22 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">No</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-4">No</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Gambar</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Produk</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">aksi</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">aksi</th>
                       
                     </tr>
                   </thead>
 
                   <tbody>
+
                   <?php
                         // include database
                         include '../config/database.php';
-                        // perintah sql untuk menampilkan daftar komentar
+                        // perintah sql untuk menampilkan daftar pengguna yang berelasi dengan tabel kategori pengguna
                         $sql="select * from produk order by id_produk desc";
                         $hasil=mysqli_query($kon,$sql);
                         $no=0;
@@ -342,422 +260,36 @@
                         $no++;
                     ?>
                     <tr>
-                        <td><?php echo $no; ?></td>
-                        <td><?php echo $data['nama']; ?></td>
-                        <td><?php echo $data['email']; ?></td>
-                        <td><?php echo $data['judul_produk']; ?></td>
-                        <td><?php echo $data['isi_komentar']; ?></td>
-                        <td><?php echo $data['status_komentar'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-danger'>Tidak Dipublish</span>"; ?> </td>
-                        <td>
-                            <button class="btn-edit btn btn-warning btn-circle" id_komentar="<?php echo $data['id_komentar']; ?>"  >Edit</button>
-                            <button class="btn-hapus btn btn-danger btn-circle"  id_komentar="<?php echo $data['id_komentar']; ?>" >Hapus</button>
-                        </td>
+                    <td class="ps-4"><?php echo $no; ?></td>
+                <td><img  src="../assets/img/produk/<?php echo $data['gambar'];?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" width="80px"></td>
+                <td><?php echo $data['judul_produk']; ?></td>
+                
+                
+                <td><?php echo date("d-m-Y",strtotime($data['tanggal'])); ?></td>
+                <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
 
+                <td>   
+                    <button class="btn-edit-produk btn btn-warning btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" data-toggle="tooltip" title="Edit produk" data-placement="top">Edit</button> 
 
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
-                            <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
+                    <button class="btn-hapus-produk btn btn-danger btn-circle"  id_produk="<?php echo $data['id_produk']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
+                </td>
 
-
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Manager</p>
-                        <p class="text-xs text-secondary mb-0">Organization</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Online</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user2">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Alexa Liras</h6>
-                            <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Programator</p>
-                        <p class="text-xs text-secondary mb-0">Developer</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user3">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Laurent Perrier</h6>
-                            <p class="text-xs text-secondary mb-0">laurent@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Executive</p>
-                        <p class="text-xs text-secondary mb-0">Projects</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Online</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user4">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Michael Levi</h6>
-                            <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Programator</p>
-                        <p class="text-xs text-secondary mb-0">Developer</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Online</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user5">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Richard Gran</h6>
-                            <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Manager</p>
-                        <p class="text-xs text-secondary mb-0">Executive</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Miriam Eric</h6>
-                            <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Programator</p>
-                        <p class="text-xs text-secondary mb-0">Developer</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-secondary">Offline</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                    </tr>
+                 </tr>
                     <?php endwhile; ?>
                   </tbody>
 
+
                 </table>
+
+
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Projects table</h6>
-              </div>
-            </div>
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive p-0">
-                <table class="table align-items-center justify-content-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Budget</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Completion</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-asana.svg" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Asana</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$2,500</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">working</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">60%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/github.svg" class="avatar avatar-sm rounded-circle me-2" alt="invision">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Github</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$5,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">done</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">100%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm rounded-circle me-2" alt="jira">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Atlassian</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$3,400</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">canceled</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">30%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/bootstrap.svg" class="avatar avatar-sm rounded-circle me-2" alt="webdev">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Bootstrap</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$14,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">working</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">80%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm rounded-circle me-2" alt="slack">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Slack</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$1,000</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">canceled</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">0%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2">
-                          <div>
-                            <img src="../assets/img/small-logos/devto.svg" class="avatar avatar-sm rounded-circle me-2" alt="xd">
-                          </div>
-                          <div class="my-auto">
-                            <h6 class="mb-0 text-sm">Devto</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-sm font-weight-bold mb-0">$2,300</p>
-                      </td>
-                      <td>
-                        <span class="text-xs font-weight-bold">done</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                          <span class="me-2 text-xs font-weight-bold">100%</span>
-                          <div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="align-middle">
-                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-ellipsis-v text-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <!-- table end -->
+
      
 
 
@@ -782,108 +314,106 @@
   </div>
 </footer>
 
-            </div>
+</div>
+</main>
 
-         
-       </main>
+<!-- Modal -->
+<div class="modal fade" id="modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+        <!-- Bagian header -->
+        <div class="modal-header">
+            <h4 class="modal-title" id="judul"></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Bagian body -->
+        <div class="modal-body">
+            <div id="tampil_data">
+
+            </div>  
+        </div>
+        <!-- Bagian footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    $('#btn-tambah-produk').on('click',function(){
+        var kategori = $('#kategori').val();
+        $.ajax({
+            url: 'produk/tambah-produk.php',
+            data: {kategori:kategori},
+            method: 'post',
+            success:function(data){
+                $('#tampil_data').html(data);  
+                document.getElementById("judul").innerHTML='Tambah Produk';
+            }
+        });
+        // Membuka modal
+        $('#modal').modal('show');
+    });
+
+        // fungsi edit produk
+    $('.btn-edit-produk').on('click',function(){
+    
+        var id_produk = $(this).attr("id_produk");
+        var kode_produk = $(this).attr("kode_produk");
+     
+        $.ajax({
+            url: '../admin/edit-produk.php',
+            method: 'post',
+            data: {id_produk:id_produk,kode_produk:kode_produk},
+            success:function(data){
+                $('#tampil_data').html(data);  
+                document.getElementById("judul").innerHTML='Edit Produk #'+kode_produk;
+            }
+        });
+        // Membuka modal
+        $('#modal').modal('show');
+    });
+
+
+    // fungsi hapus produk
+    $('.btn-hapus-produk').on('click',function(){
+
+        var id_produk = $(this).attr("id_produk");
+        var gambar = $(this).attr("gambar");
+        var kategori = $('#kategori').val();
+        konfirmasi=confirm("Yakin ingin menghapus?")
+        
+        if (konfirmasi){
+            $.ajax({
+                url: '../admin/hapus-produk.php',
+                method: 'post',
+                data: {id_produk:id_produk,gambar:gambar},
+                success:function(data){
+                    window.location.href = 'index.php?halaman=produk&kategori='+kategori+'&hapus=berhasil';
+                }
+            });
+        }
+
+     
+    });
+
+</script>
     
 
-      
-         
-
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <!--   Core JS Files   -->
 <script src="..admin/assets/js/core/popper.min.js" ></script>
 <script src="..admin/assets/js/core/bootstrap.min.js" ></script>
 <script src="..admin/assets/js/plugins/perfect-scrollbar.min.js" ></script>
 <script src="..admin/assets/js/plugins/smooth-scrollbar.min.js" ></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script>
@@ -904,3 +434,4 @@
   </body>
 
 </html>
+       
