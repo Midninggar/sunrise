@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-    if (isset($_POST['update_produk'])) {
+    if (isset($_POST['update_ourclient'])) {
         //Include file koneksi, untuk koneksikan ke database
        
         
@@ -16,12 +16,12 @@ session_start();
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         
-            $id_produk=input($_POST["id_produk"]);
-            $judul_produk=input($_POST["judul_produk"]);
-        
-         
+            $id_logoclient=input($_POST["id_logoclient"]);
+            $nama_client=input($_POST["nama_client"]);
+
+
             $status=input($_POST["status"]);
-            $deskripsi=input($_POST["deskripsi"]);
+
             $gambar_saat_ini=$_POST['gambar_saat_ini'];
             $gambar_baru = $_FILES['gambar_baru']['name'];
             $ekstensi_diperbolehkan	= array('png','jpg');
@@ -37,39 +37,37 @@ session_start();
             if (!empty($gambar_baru)){
                 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                     //Mengupload gambar baru
-                    move_uploaded_file($file_tmp, '../assets/img/produk/'.$gambar_baru);
+                    move_uploaded_file($file_tmp, '../assets/img/ourclient/'.$gambar_baru);
 
                     //Menghapus gambar lama, gambar yang dihapus selain gambar default
                     if ($gambar_saat_ini!='gambar_default.png'){
-                        unlink("../assets/img/produk/".$gambar_saat_ini);
+                        unlink("../assets/img/ourclient/".$gambar_saat_ini);
                     }
                     
-                    $sql="update produk set
-                    judul_produk='$judul_produk',
-                    deskripsi='$deskripsi',
+                    $sql="update ourclient set
+                    nama_client='$nama_client',
                     gambar='$gambar_baru',
                     status='$status',
                     tanggal='$tanggal'
-                    where id_produk=$id_produk"; 
+                    where id_logoclient=$id_logoclient"; 
                 }
             }else {
-                    $sql="update produk set
-                    judul_produk='$judul_produk',
-                    deskripsi='$deskripsi',
+                    $sql="update ourclient set
+                    nama_client='$nama_client',
                     status='$status',
                     tanggal='$tanggal'
-                    where id_produk=$id_produk"; 
-            }
+                    where id_logoclient=$id_logoclient";  
+                }
 
             //Mengeksekusi/menjalankan query 
-            $edit_produk=mysqli_query($kon,$sql);
+            $edit_ourclient=mysqli_query($kon,$sql);
 
             //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
-            if ($edit_produk) {
-                header("Location:./content.php");
+            if ($edit_ourclient) {
+                header("Location:./ourclient.php");
             }
             else {
-                header("Location:./content.php");
+                header("Location:./ourclient.php");
                 
             }  
 
@@ -78,22 +76,23 @@ session_start();
         }
 
     }
-    $id_produk=$_POST["id_produk"];
+    $id_logoclient=$_POST["id_logoclient"];
+
     // mengambil data barang dengan kode paling besar
     include '../config/database.php';
-    $query = mysqli_query($kon, "SELECT * FROM produk where id_produk=$id_produk");
+    $query = mysqli_query($kon, "SELECT * FROM ourclient where id_logoclient=$id_logoclient");
     $data = mysqli_fetch_array($query); 
 
 ?>
-<form action="../admin/edit-produk.php" method="post" enctype="multipart/form-data">
+<form action="../admin/edit-ourclient.php" method="post" enctype="multipart/form-data">
     <!-- rows -->
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group">
                 <label>Kode:</label>
                 <h3><?php echo $data['kode_produk']; ?></h3>
-                <input name="kode_produk" value="<?php  echo $data['kode_produk']; ?>" type="hidden" class="form-control">
-                <input name="id_produk" value="<?php  echo $data['id_produk']; ?>" type="hidden" class="form-control">
+                <input name="kode_logo" value="<?php  echo $data['kode_logo']; ?>" type="hidden" class="form-control">
+                <input name="id_logoclient" value="<?php  echo $data['id_logoclient']; ?>" type="hidden" class="form-control">
             </div>
         </div>
     </div>
@@ -101,27 +100,19 @@ session_start();
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group">
-                <label>Judul produk:</label>
-                <input name="judul_produk" type="text" value="<?php  echo $data['judul_produk']; ?>" class="form-control" placeholder="Masukan nama produk" required>
+                <label>Nama Client:</label>
+                <input name="nama_client" type="text" value="<?php  echo $data['nama_client']; ?>" class="form-control" placeholder="Masukan Nama" required>
             </div>
         </div>
     </div>
 
-    <!-- rows -->   
-    <div class="row">
-    <div class="col-sm-12">
-        <div class="form-group">
-            <label>Deskripsi:</label>
-            <textarea name="deskripsi" class="form-control"  rows="5" ><?php  echo $data['deskripsi']; ?></textarea>
-        </div>
-    </div>
-    </div>
+
 
     <!-- rows -->                 
     <div class="row">
         <div class="col-sm-6">
         <label>Gambar Saat ini:</label>
-            <img src="../assets/img/produk/<?php echo $data['gambar'];?>" class="rounded" width="90%" alt="Gambar tidak ditemukan">
+            <img src="../assets/img/ourclient/<?php echo $data['gambar'];?>" class="rounded" width="90%" alt="Gambar tidak ditemukan">
             <input type="text" name="gambar_saat_ini" value="<?php echo $data['gambar'];?>" class="form-control" />
         </div>
         <div class="col-sm-6">
@@ -162,7 +153,7 @@ session_start();
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <button type="submit" name="update_produk" class="btn btn-success">Update produk</button>
+                <button type="submit" name="update_produk" class="btn btn-success">Update Logo</button>
             </div>
         </div>   
     </div>    

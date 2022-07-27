@@ -23,11 +23,11 @@ session_start();
             //Include database
             include '../config/database.php';
 
-            $kode_produk=input($_POST["kode_produk"]);
-            $judul_produk=input($_POST["judul_produk"]);
+            $kode_logo=input($_POST["kode_logo"]);
+            $nama_client=input($_POST["nama_client"]);
             
             
-            $deskripsi=input($_POST["deskripsi"]);
+            
             $tanggal=date("Y-m-d H:i:s");
             $ekstensi_diperbolehkan	= array('png','jpg');
             $gambar = $_FILES['gambar']['name'];
@@ -39,17 +39,17 @@ session_start();
             if (!empty($gambar)){
                 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                     //Mengupload gambar
-                    move_uploaded_file($file_tmp, '../assets/img/produk/'.$gambar);
+                    move_uploaded_file($file_tmp, '../assets/img/ourclient/'.$gambar);
 
                     //Menambah produk dengan gambar
-                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status) values
-                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status')";
+                    $sql="insert into ourclient (kode_logo,nama_client,gambar,tanggal,status) values
+                    ('$kode_logo','$nama_client','$gambar','$tanggal','$status')";
                 }    
                 
             }else {
                     //Menambah produk tanpa gambar, maka gambar_defauilt.png yang akan digunakan
-                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status) values
-                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status')";
+                    $sql="insert into ourclient (kode_logo,nama_client,gambar,tanggal,status) values
+                    ('$kode_logo','$nama_client','$gambar','$tanggal','$status')";
                      
             }
 
@@ -58,10 +58,10 @@ session_start();
 
             //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
             if ($simpan_produk) {
-                header("Location:../admin/content.php");
+                header("Location:../admin/ourclient.php");
             }
             else {
-                header("Location:../admin/content.php");
+                header("Location:../admin/ourclient.php");
                 
             } 
 
@@ -70,22 +70,22 @@ session_start();
 
       // mengambil data produk dengan kode paling besar
       include '../config/database.php';
-      $query = mysqli_query($kon, "SELECT max(id_produk) as kodeTerbesar FROM produk");
+      $query = mysqli_query($kon, "SELECT max(id_logoclient) as kodeTerbesar FROM ourclient");
       $data = mysqli_fetch_array($query);
-      $id_produk = $data['kodeTerbesar'];
-      $id_produk++;
-      $huruf = "A";
-      $kode_produk = $huruf . sprintf("%04s", $id_produk);
+      $id_logoclient = $data['kodeTerbesar'];
+      $id_logoclient++;
+      $huruf = "L";
+      $kode_logo = $huruf . sprintf("%04s", $id_logoclient);
 
 ?>
-<form action="../admin/tambah-produk.php" method="post" enctype="multipart/form-data">
+<form action="../admin/tambah-ourclient.php" method="post" enctype="multipart/form-data">
     <!-- rows -->
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group">
                 <label>Kode:</label>
-                <h3><?php echo $kode_produk; ?></h3>
-                <input name="kode_produk" value="<?php echo $kode_produk; ?>" type="hidden" class="form-control">
+                <h3><?php echo $kode_logo; ?></h3>
+                <input name="kode_logo" value="<?php echo $kode_logo; ?>" type="hidden" class="form-control">
             </div>
         </div>
     </div>
@@ -93,21 +93,13 @@ session_start();
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group">
-                <label>Judul Produk:</label>
-                <input name="judul_produk" type="text" class="form-control" placeholder="Masukan nama produk" required>
+                <label>Nama Client:</label>
+                <input name="nama_client" type="text" class="form-control" placeholder="Masukan nama client" required>
             </div>
         </div>
     </div>
 
-    <!-- rows -->   
-    <div class="row">
-    <div class="col-sm-12">
-        <div class="form-group">
-            <label>Deskripsi:</label>
-            <textarea name="deskripsi" class="form-control" rows="5" placeholder="Tuliskan deskripsinya disini.." required   ></textarea>
-        </div>
-    </div>
-    </div>
+
     <!-- rows -->
     <div class="row">
         <div class="col-sm-6">

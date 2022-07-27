@@ -2,19 +2,6 @@
 <html lang="en">
   <head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -255,7 +242,7 @@
                         // include database
                         include '../config/database.php';
                         // perintah sql untuk menampilkan daftar pengguna yang berelasi dengan tabel kategori pengguna
-                        $sql="select * from produk order by id_produk desc";
+                        $sql="select * from ourclient order by id_logoclient desc";
                         $hasil=mysqli_query($kon,$sql);
                         $no=0;
                         //Menampilkan data dengan perulangan while
@@ -264,20 +251,17 @@
                     ?>
                     <tr>
                     <td class="ps-4"><?php echo $no; ?></td>
-                <td><img  src="../assets/img/produk/<?php echo $data['gambar'];?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" width="80px"></td>
-                <td><?php echo $data['judul_produk']; ?></td>
-                <td><?php 
-                          $ambil=$data["deskripsi"];
-                          $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
-                          echo substr($panjang, 0, 50);?></td>
+                <td><img  src="../assets/img/ourclient/<?php echo $data['gambar'];?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" width="80px"></td>
+                <td><?php echo $data['nama_client']; ?></td>
+                
                 
                 <td><?php echo date("d-m-Y",strtotime($data['tanggal'])); ?></td>
                 <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
 
                 <td>   
-                    <button class="btn-edit-produk btn btn-warning btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" data-toggle="tooltip" title="Edit produk" data-placement="top">Edit</button> 
+                    <button class="btn-edit-ourclient btn btn-warning btn-circle" id_produk="<?php echo $data['id_logoclient']; ?>" kode_logo="<?php echo $data['kode_logo']; ?>" data-toggle="tooltip" title="Edit ourclient" data-placement="top">Edit</button> 
 
-                    <button class="btn-hapus-produk btn btn-danger btn-circle"  id_produk="<?php echo $data['id_produk']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
+                    <button class="btn-hapus-produk btn btn-danger btn-circle"  id_produk="<?php echo $data['id_logoclient']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
                 </td>
 
                  </tr>
@@ -358,11 +342,11 @@
     $('#btn-tambah-produk').on('click',function(){
         
         $.ajax({
-            url: '../admin/tambah-produk.php',
+            url: '../admin/tambah-ourclient.php',
             method: 'post',
             success:function(data){
                 $('#tampil_data').html(data);  
-                document.getElementById("judul").innerHTML='Tambah Produk';
+                document.getElementById("judul").innerHTML='Tambah ourclient';
             }
         });
         // Membuka modal
@@ -370,18 +354,18 @@
     });
 
         // fungsi edit produk
-    $('.btn-edit-produk').on('click',function(){
+    $('.btn-edit-ourclient').on('click',function(){
     
-        var id_produk = $(this).attr("id_produk");
-        var kode_produk = $(this).attr("kode_produk");
+        var id_logoclient = $(this).attr("id_logoclient");
+        var kode_logo = $(this).attr("kode_logo");
      
         $.ajax({
-            url: '../admin/edit-produk.php',
+            url: '../admin/edit-ourclient.php',
             method: 'post',
-            data: {id_produk:id_produk,kode_produk:kode_produk},
+            data: {id_logoclient:id_logoclient,kode_logo:kode_logo},
             success:function(data){
                 $('#tampil_data').html(data);  
-                document.getElementById("judul").innerHTML='Edit Produk #'+kode_produk;
+                document.getElementById("judul").innerHTML='Edit ourclient #'+kode_logo;
             }
         });
         // Membuka modal
