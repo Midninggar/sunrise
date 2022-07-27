@@ -148,10 +148,10 @@
 
   
 <li class="nav-item">
-  <a class="nav-link text-dark " href="./sign-in.html">
+  <a class="nav-link text-dark " href="./logout.php">
     
       <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-        <i class="material-icons opacity-10">login</i>
+        <i class="material-icons opacity-10">logout</i>
       </div>
     
     <span class="nav-link-text ms-1">Logout</span>
@@ -226,8 +226,10 @@
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <button type="button" id="btn-tambah-produk" class="btn btn-primary"><span class="text"><i class="fas fa-plus fa-sm m-2"></i> Tambah produk</span></button>
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                 <h6 class="text-white text-capitalize ps-3">Product table</h6>
+                
               </div>
             </div>
 
@@ -239,6 +241,7 @@
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-4">No</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Gambar</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Produk</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Deskripsi</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">aksi</th>
@@ -263,7 +266,10 @@
                     <td class="ps-4"><?php echo $no; ?></td>
                 <td><img  src="../assets/img/produk/<?php echo $data['gambar'];?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" width="80px"></td>
                 <td><?php echo $data['judul_produk']; ?></td>
-                
+                <td><?php 
+                          $ambil=$data["deskripsi"];
+                          $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
+                          echo substr($panjang, 0, 50);?></td>
                 
                 <td><?php echo date("d-m-Y",strtotime($data['tanggal'])); ?></td>
                 <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
@@ -347,11 +353,12 @@
 
 <script>
 
+
+
     $('#btn-tambah-produk').on('click',function(){
-        var kategori = $('#kategori').val();
+        
         $.ajax({
-            url: 'produk/tambah-produk.php',
-            data: {kategori:kategori},
+            url: '../admin/tambah-produk.php',
             method: 'post',
             success:function(data){
                 $('#tampil_data').html(data);  
@@ -396,7 +403,7 @@
                 method: 'post',
                 data: {id_produk:id_produk,gambar:gambar},
                 success:function(data){
-                    window.location.href = 'index.php?halaman=produk&kategori='+kategori+'&hapus=berhasil';
+                    window.location.href = 'content.php';
                 }
             });
         }
@@ -426,11 +433,7 @@
   }
 </script>
 
-<!-- Github buttons -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
-
-<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc --><script src="../assets/js/material-dashboard.min.js?v=3.0.4"></script>
   </body>
 
 </html>

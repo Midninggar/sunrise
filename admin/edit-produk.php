@@ -46,10 +46,8 @@ session_start();
                     
                     $sql="update produk set
                     judul_produk='$judul_produk',
-                    harga='$harga',
                     deskripsi='$deskripsi',
                     gambar='$gambar_baru',
-                    id_kategori='$kategori',
                     status='$status',
                     tanggal='$tanggal'
                     where id_produk=$id_produk"; 
@@ -57,9 +55,7 @@ session_start();
             }else {
                     $sql="update produk set
                     judul_produk='$judul_produk',
-                    harga='$harga',
                     deskripsi='$deskripsi',
-                    id_kategori='$kategori',
                     status='$status',
                     tanggal='$tanggal'
                     where id_produk=$id_produk"; 
@@ -110,15 +106,7 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- rows -->
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="form-group">
-                <label>Harga Produk:</label>
-                <input name="harga" type="number" class="form-control" placeholder="Masukan harga produk" required>
-            </div>
-        </div>
-    </div>
+
     <!-- rows -->   
     <div class="row">
     <div class="col-sm-12">
@@ -133,7 +121,7 @@ session_start();
     <div class="row">
         <div class="col-sm-6">
         <label>Gambar Saat ini:</label>
-            <img src="produk/gambar/<?php echo $data['gambar'];?>" class="rounded" width="90%" alt="Cinque Terre">
+            <img src="../assets/img/produk/<?php echo $data['gambar'];?>" class="rounded" width="90%" alt="Gambar tidak ditemukan">
             <input type="text" name="gambar_saat_ini" value="<?php echo $data['gambar'];?>" class="form-control" />
         </div>
         <div class="col-sm-6">
@@ -151,27 +139,7 @@ session_start();
     </div>
 
     <!-- rows -->
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label>Kategori:</label>
-                    <select name="kategori" class="form-control">
-                        <!-- Menampilkan daftar kategori produk di dalam select list -->
-                        <?php
-                        
-                        $sql="select * from kategori order by id_kategori asc";
-                        $hasil=mysqli_query($kon,$sql);
-                        $no=0;
-                        if ($data['id_kategori']==0) echo "<option value='0'>-</option>";
-                        while ($kt = mysqli_fetch_array($hasil)):
-                        $no++;
-                        ?>
-                        <option  <?php if ($data['id_kategori']==$kt['id_kategori']) echo "selected"; ?> value="<?php echo $kt['id_kategori']; ?>"><?php echo $kt['nama_kategori']; ?></option>
-                        <?php endwhile; ?>
-                </select>
-            </div>
-        </div>
-    </div>
+
     <!-- rows -->
     <div class="row">
         <div class="col-sm-6">
