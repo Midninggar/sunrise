@@ -122,7 +122,7 @@
 
   <div class="col-lg-4 mb-4"  >
   <div class="card border-0 shadow-sm mb-2 bg-primary"  style="width: 100%; height: 450px;">
-      <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="250" height="250px" class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
+      <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="250" height="250px" class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
 
         <div class="card-body bg-light text-center p-4" >
           <h4 class="card-title" ><?php echo $data['judul_produk'];?></h4>
@@ -133,7 +133,7 @@
 
                           
         </div>
-        <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn  btn-primary  px-4 mx-auto my-2" role="button">Selengkapnya</a>
+        <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn  btn-primary  px-4 mx-auto my-2" role="button">Selengkapnya</a>
     </div>
     </div>
     <?php 
