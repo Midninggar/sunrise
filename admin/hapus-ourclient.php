@@ -2,15 +2,15 @@
 session_start();
     include '../config/database.php';
 
-    $id_produk=$_POST["id_produk"];
+    $id_logoclient=$_POST["id_logoclient"];
     $gambar=$_POST["gambar"];
 
-    $sql="delete from produk where id_produk=$id_produk";
-    $hapus_produk=mysqli_query($kon,$sql);
+    $sql="delete from ourclient where id_logoclient=$id_logoclient";
+    $hapus_ourclient=mysqli_query($kon,$sql);
 
     //Menghapus gambar, gambar yang dihapus jika selain gambar default
     if ($gambar!='gambar_default.png'){
-        unlink("gambar/".$gambar);
+        unlink("../assets/img/ourclient/".$gambar);
     }
  
 

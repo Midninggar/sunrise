@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jul 2022 pada 17.07
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.1.1
+-- Waktu pembuatan: 28 Jul 2022 pada 11.37
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -69,10 +69,8 @@ CREATE TABLE `ourclient` (
 --
 
 INSERT INTO `ourclient` (`id_logoclient`, `kode_logo`, `nama_client`, `gambar`, `tanggal`, `status`) VALUES
-(1, '', 'sunrise', 'logo.png', '2022-07-27 14:48:34', 1),
-(2, '', 'jsgdk', 'home-decor-2.jpg', '2022-07-27 15:51:52', 1),
-(3, '', 'ajgdkcka', 'drake.jpg', '2022-07-27 16:53:10', 1),
-(4, 'L0004', 'gdsc', 'kal-visuals-square.jpg', '2022-07-27 17:00:41', 1);
+(13, 'L0013', 'fgd1', 'flyer_1.jpg', '2022-07-28 11:07:01', 1),
+(14, 'L0014', 'wed', 'wedding_1.jpg', '2022-07-28 11:07:21', 1);
 
 -- --------------------------------------------------------
 
@@ -158,7 +156,8 @@ ALTER TABLE `komentar`
 -- Indeks untuk tabel `ourclient`
 --
 ALTER TABLE `ourclient`
-  ADD PRIMARY KEY (`id_logoclient`);
+  ADD PRIMARY KEY (`id_logoclient`),
+  ADD KEY `id_logoclient` (`id_logoclient`);
 
 --
 -- Indeks untuk tabel `pengguna`
@@ -190,7 +189,7 @@ ALTER TABLE `komentar`
 -- AUTO_INCREMENT untuk tabel `ourclient`
 --
 ALTER TABLE `ourclient`
-  MODIFY `id_logoclient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_logoclient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengguna`

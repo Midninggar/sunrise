@@ -259,9 +259,9 @@
                 <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
 
                 <td>   
-                    <button class="btn-edit-ourclient btn btn-warning btn-circle" id_produk="<?php echo $data['id_logoclient']; ?>" kode_logo="<?php echo $data['kode_logo']; ?>" data-toggle="tooltip" title="Edit ourclient" data-placement="top">Edit</button> 
+                    <button class="btn-edit-ourclient btn btn-warning btn-circle" id_logoclient="<?php echo $data['id_logoclient']; ?>" kode_logo="<?php echo $data['kode_logo']; ?>" data-toggle="tooltip" title="Edit ourclient" data-placement="top">Edit</button> 
 
-                    <button class="btn-hapus-produk btn btn-danger btn-circle"  id_produk="<?php echo $data['id_logoclient']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
+                    <button class="btn-hapus-ourclient btn btn-danger btn-circle"  id_logoclient="<?php echo $data['id_logoclient']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
                 </td>
 
                  </tr>
@@ -374,20 +374,20 @@
 
 
     // fungsi hapus produk
-    $('.btn-hapus-produk').on('click',function(){
+    $('.btn-hapus-ourclient').on('click',function(){
 
-        var id_produk = $(this).attr("id_produk");
+        var id_logoclient = $(this).attr("id_logoclient");
         var gambar = $(this).attr("gambar");
-        var kategori = $('#kategori').val();
+        
         konfirmasi=confirm("Yakin ingin menghapus?")
         
         if (konfirmasi){
             $.ajax({
-                url: '../admin/hapus-produk.php',
+                url: '../admin/hapus-ourclient.php',
                 method: 'post',
-                data: {id_produk:id_produk,gambar:gambar},
+                data: {id_logoclient:id_logoclient,gambar:gambar},
                 success:function(data){
-                    window.location.href = 'content.php';
+                    window.location.href = 'ourclient.php';
                 }
             });
         }

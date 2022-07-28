@@ -18,7 +18,7 @@ session_start();
         
             $id_logoclient=input($_POST["id_logoclient"]);
             $nama_client=input($_POST["nama_client"]);
-
+            $kode_logo=input($_POST["kode_logo"]);
 
             $status=input($_POST["status"]);
 
@@ -90,7 +90,7 @@ session_start();
         <div class="col-sm-12">
             <div class="form-group">
                 <label>Kode:</label>
-                <h3><?php echo $data['kode_produk']; ?></h3>
+                <h3><?php echo $data['kode_logo']; ?></h3>
                 <input name="kode_logo" value="<?php  echo $data['kode_logo']; ?>" type="hidden" class="form-control">
                 <input name="id_logoclient" value="<?php  echo $data['id_logoclient']; ?>" type="hidden" class="form-control">
             </div>
@@ -153,7 +153,7 @@ session_start();
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <button type="submit" name="update_produk" class="btn btn-success">Update Logo</button>
+                <button type="submit" name="update_ourclient" class="btn btn-success">Update Ourclient</button>
             </div>
         </div>   
     </div>    

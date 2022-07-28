@@ -157,62 +157,50 @@
     </div>
 
     <div class=" row pb-3 ">
-      <div class="col-lg-4 mb-4">
-        <div class="card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
 
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4 ">
-        
-        <div class=" card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
-
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card border-0 shadow-sm mb-2">
-          <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="" />
-          <div class="card-body bg-light text-center p-4">
-            <h4 class="">Diam amet eos at no eos</h4>
-
-            <p>
-              Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
-              eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
-              lorem. Tempor ipsum justo amet stet...
-            </p>
-            <a href="" class="btn btn-primary px-4 mx-auto my-2"
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
+    <?php
+         
+         include 'config/database.php';
+         if (isset($_GET['kategori'])) {
+             $sql="select * from produk where status=1 and id_kategori=".$_GET['kategori']." order by id_produk desc limit 3";
+         }else {
+             $sql="select * from produk where status=1 order by id_produk desc limit 3";
+         }
+     
+         
+         $hasil=mysqli_query($kon,$sql);
+         $jumlah = mysqli_num_rows($hasil);
+         if ($jumlah>0){
+             while ($data = mysqli_fetch_array($hasil)):
+         ?>
+     
+       <div class="col-lg-4 mb-4"  >
+       <div class="card border-0 shadow-sm mb-2 bg-primary"  style="width: 100%; height: 450px;">
+           <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="250" height="250px" class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
+     
+             <div class="card-body bg-light text-center p-4" >
+               <h4 class="card-title" ><?php echo $data['judul_produk'];?></h4>
+               <p class="card-text" ><?php 
+                               $ambil=$data["deskripsi"];
+                               $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
+                               echo substr($panjang, 0, 100);?></p>
+     
+                               
+             </div>
+             <a href="index.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn  btn-primary  px-4 mx-auto my-2" role="button">Selengkapnya</a>
+         </div>
+         </div>
+         <?php 
+                 endwhile;
+             }else {
+                 echo "<div class='alert alert-warning'> Tidak ada artikel pada kategori ini.</div>";
+             };
+             ?>
+         </div>
+         </div>
+       </div>  
+       </div>
+ 
 <!-- Blog End -->
     
 
@@ -227,29 +215,35 @@
         </div>
         <div class="owl-carousel testimonial-carousel">
 
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-              <a class="navbar-brand" href="#">
-                <img src="assets/img/logo2.png" alt="" width="100" ></a>
-              
-            </div>
-          </div>
+        <?php
+         
+         include 'config/database.php';
+         if (isset($_GET['id_logoclient'])) {
+             $sql="select * from ourclient where status=1 and id_logoclient=".$_GET['id_logoclient']." order by id_logoclient desc limit 3";
+         }else {
+             $sql="select * from ourclient where status=1 order by id_logoclient desc limit 3";
+         }
+     
+         
+         $hasil=mysqli_query($kon,$sql);
+         $jumlah = mysqli_num_rows($hasil);
+         if ($jumlah>0){
+             while ($data = mysqli_fetch_array($hasil)):
+         ?>
 
-
+          <div class="testimonial-item px-3">
+            <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <a class="navbar-brand" href="index.php=<?php echo $data['id_logoclient'];?>"><img src="assets/img/ourclient/<?php echo $data['gambar'];?>" width="100" alt="Gambar tidak ditemukan"></a>
+            
+              
+            </div>
+          </div>
+          <?php 
+                 endwhile;
+             }else {
+                 echo "<div class='alert alert-warning'> Tidak ada logo.</div>";
+             };
+             ?>
       </div>
     </div>
     <!-- Our Client End -->
@@ -327,7 +321,7 @@
         <p class="text-center text-white">
           &copy;
           <a class="text-primary font-weight-bold" href="#">Sunrise Offset Printing</a>.
-          All Rights Reserved.
+          All Rights Reserved. 
         </p>
       </div>
     </div>
