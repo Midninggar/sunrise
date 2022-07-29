@@ -87,6 +87,8 @@
     </div>
     <!-- Header End -->
 
+
+
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
       <div class="container">
@@ -96,86 +98,43 @@
           </p>
           <h1 class="mb-4">Form Penawaran</h1>
         </div>
+
         <div class="row">
           <div class="col-lg-7 mb-5">
             <div class="contact-form">
               <div id="success"></div>
-              <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your Name"
-                    required="required"
-                    data-validation-required-message="Please enter your name"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Your Email"
-                    required="required"
-                    data-validation-required-message="Please enter your email"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phone"
-                    placeholder="Phone"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="company"
-                    placeholder="Company"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="website"
-                    placeholder="Website"
-                    required="required"
-                    data-validation-required-message="Please enter a subject"
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="control-group">
-                  <textarea
-                    class="form-control"
-                    rows="6"
-                    id="message"
-                    placeholder="Message"
-                    required="required"
-                    data-validation-required-message="Please enter your message"
-                  ></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div>
-                  <button
-                    class="btn btn-primary py-2 px-4"
-                    type="submit"
-                    id="sendMessageButton"
-                  >
-                    Send Message
-                  </button>
-                </div>
+
+              <form method="post" action="penawaran-message.php">
+                
+              <div class="form-group">
+                  <label>Nama:</label>
+                  <input type="text" name="nama" class="form-control">
+              </div>
+
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone:</label>
+                        <input type="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Company:</label>
+                        <input type="company" name="company" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Website:</label>
+                        <input type="website" name="website" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pesan:</label>
+                        <textarea class="form-control" type="pesan" name="pesan" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit"  name="form_penawaran" class="btn btn-primary" value="Kirim Penawaran">
+                    </div>
               </form>
             </div>
           </div>
@@ -228,6 +187,7 @@
                 <p class="m-0">08:00 WIB - 13:00 WIB</p>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -316,6 +276,7 @@
       ><i class="fa fa-angle-double-up"></i
     ></a>
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

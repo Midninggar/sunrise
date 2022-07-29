@@ -233,7 +233,7 @@
 
           <div class="testimonial-item px-3">
             <div class="bg-light shadow-sm rounded mb-4 p-4">
-            <a class="navbar-brand" href="index.php=<?php echo $data['id_logoclient'];?>"><img src="assets/img/ourclient/<?php echo $data['gambar'];?>" width="100" alt="Gambar tidak ditemukan"></a>
+            <a class="navbar-brand" href="#"><img src="assets/img/ourclient/<?php echo $data['gambar'];?>" width="100" alt="Gambar tidak ditemukan"></a>
             
               
             </div>

@@ -81,7 +81,7 @@
     <div class="col-lg-6 mx-auto">
         <div class="thumbnail">
 
-        <a href="produk.php?=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="100%"  class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
+        <img src="assets/img/produk/<?php echo $data['gambar'];?>" width="100%"  class="card-img-top mb-4" alt="Gambar tidak ditemukan">
            
             <div class="caption text-center">
             <h1><?php echo $data['judul_produk'];?></h1>
@@ -93,16 +93,7 @@
             </div>
 
 
-            <?php
-                  if (isset($_GET['komentar'])) {
-                    //Mengecek nilai variabel add yang telah di enskripsi dengan method md5()
-                    if ($_GET['komentar']=='berhasil'){
-                        echo"<div class='alert alert-success'>Komentar telah terkirim, menunggu persetujuan dari admin</div>";
-                    }else {
-                        echo"<div class='alert alert-danger'>Komentar gagal</div>";
-                    }   
-                }
-            ?>
+ 
 
         </div>
     </div>
@@ -121,7 +112,7 @@
                     <h4><a class="text-dark" href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><?php echo $data['judul_produk'];?></a></h4>
                     <div class="row">
                         <div class="col-lg-3">
-                            <img src="assets/img/produk/<?php echo $data['gambar'];?>"  width="100%" alt="Gambar tidak ditemukan" >
+                            <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>"  width="100%" alt="Gambar tidak ditemukan" ></a>
                         </div>
                         <div class="col-sm-9">
                             <?php
