@@ -108,16 +108,16 @@
                 
               <div class="form-group">
                   <label>Nama:</label>
-                  <input type="text" name="nama" class="form-control">
+                  <input type="text" name="nama" class="form-control" required>
               </div>
 
                     <div class="form-group">
                         <label>Email:</label>
-                        <input type="email" name="email" class="form-control">
+                        <input type="email" name="email" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Phone:</label>
-                        <input type="phone" name="phone" class="form-control">
+                        <input type="phone" name="phone" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Company:</label>
@@ -130,7 +130,7 @@
 
                     <div class="form-group">
                         <label>Pesan:</label>
-                        <textarea class="form-control" type="pesan" name="pesan" rows="5"></textarea>
+                        <textarea class="form-control" type="pesan" name="pesan" rows="5" required></textarea>
                     </div>
                     <div class="form-group">
                         <input type="submit"  name="form_penawaran" class="btn btn-primary" value="Kirim Penawaran">

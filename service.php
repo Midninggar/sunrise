@@ -107,8 +107,8 @@
 <?php
          
     include 'config/database.php';
-    if (isset($_GET['kategori'])) {
-        $sql="select * from produk where status=1 and id_kategori=".$_GET['kategori']." order by id_produk desc";
+    if (isset($_GET['id_produk'])) {
+        $sql="select * from produk where status=1 order by id_produk desc";
     }else {
         $sql="select * from produk where status=1 order by id_produk desc";
     }

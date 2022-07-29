@@ -200,27 +200,46 @@
         <div class="col-md-7 mt-4">
           <div class="card">
             <div class="card-header pb-0 px-3">
-              <h6 class="mb-0">Messenger</h6>
+              <h6 class="mb-0">Penawaran Harga</h6>
             </div>
+
+            <?php
+                        // include database
+                        include '../config/database.php';
+                        // perintah sql untuk menampilkan daftar pengguna yang berelasi dengan tabel kategori pengguna
+                        $sql="select * from message order by id_message desc";
+                        $hasil=mysqli_query($kon,$sql);
+                        $no=0;
+                        //Menampilkan data dengan perulangan while
+                        while ($data = mysqli_fetch_array($hasil)):
+                        $no++;
+                    ?>
 
 
             <div class="card-body pt-4 p-3">
               <ul class="list-group">
                 <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                   <div class="d-flex flex-column">
-                    <h6 class="mb-3 text-sm">Oliver Liam</h6>
-                    <span class="mb-2 text-xs">Company Name: <span class="text-dark font-weight-bold ms-sm-2">Viking Burrito</span></span>
-                    <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-sm-2 font-weight-bold">oliver@burrito.com</span></span>
-                    <span class="text-xs">VAT Number: <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                    <h6 class="mb-3 text-sm"><?php echo $data['nama'];?></h6>
+                    <span class="mb-2 text-xs">Email Address : <span class="text-dark font-weight-bold ms-sm-2"><?php echo $data['email'];?></span></span>
+                    <span class="mb-2 text-xs">Phone : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['phone'];?></span></span>
+                    <span class="mb-2 text-xs">Company : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['company'];?></span></span>
+                    <span class="mb-2 text-xs">Website : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['website'];?></span></span>
+                    <span class=" text-sm">Pesan : <span class="text-dark ms-sm-2 "></span></span>
+                    <div class="col">
+                      <span><?php echo $data['pesan'];?></span>
+                    </div>
                   </div>
                   <div class="ms-auto text-end">
-                    <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;"><i class="material-icons text-sm me-2">delete</i>Delete</a>
-                    <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="material-icons text-sm me-2">edit</i>Edit</a>
+                    <a class="btn btn-link btn-hapus text-danger text-gradient px-3 mb-0" id_message="<?php echo $data['id_message']; ?>"><i class="material-icons text-sm me-2">delete</i>Hapus</a>
+
+                    
                   </div>
                 </li>
 
               </ul>
             </div>
+            <?php endwhile; ?>
           </div>
         </div>
 
@@ -262,6 +281,27 @@
 <script src="..admin/assets/js/plugins/perfect-scrollbar.min.js" ></script>
 <script src="..admin/assets/js/plugins/smooth-scrollbar.min.js" ></script>
 
+<script>
+// fungsi hapus pesan
+    $('.btn-hapus').on('click',function(){
+
+        var id_message = $(this).attr("id_message");
+
+        konfirmasi=confirm("Yakin ingin menghapus?")
+
+        if (konfirmasi){
+            $.ajax({
+                url: '../admin/hapus-pesan.php',
+                method: 'post',
+                data: {id_message:id_message},
+                success:function(data){
+                    window.location.href = 'notifications.php';
+                }
+            });
+        }
+});
+
+</script>
 
 <script>
   var win = navigator.platform.indexOf('Win') > -1;
@@ -272,6 +312,8 @@
     Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
   }
 </script>
+
+
 
 
   </body>
