@@ -2,19 +2,6 @@
 <html lang="en">
   <head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -95,7 +82,7 @@
 
   
 <li class="nav-item">
-  <a class="nav-link text-dark active bg-gradient-primary " href="./content.php">
+  <a class="nav-link text-dark  " href="./content.php">
     
       <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">table_view</i>
@@ -107,9 +94,9 @@
 
   
 <li class="nav-item">
-  <a class="nav-link text-dark " href="./ourclient.php">
+  <a class="nav-link text-dark  " href="./ourclient.php">
     
-      <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+      <div class="text-dark  text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">receipt_long</i>
       </div>
     
@@ -136,7 +123,7 @@
     </li>
   
 <li class="nav-item">
-  <a class="nav-link text-dark " href="./profile.php">
+  <a class="nav-link text-dark active bg-gradient-primary " href="./profile.php">
     
       <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
         <i class="material-icons opacity-10">person</i>
@@ -182,9 +169,9 @@
       
       <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">content</li>
+        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">profile</li>
       </ol>
-      <h6 class="font-weight-bolder mb-0">content</h6>
+      <h6 class="font-weight-bolder mb-0">profile</h6>
       
   </nav>
   </div>
@@ -193,7 +180,59 @@
 
 <!-- End Navbar -->
 
-<?php
+
+<div class="container-fluid px-2 px-md-4">
+      <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        <span class="mask  bg-gradient-primary  opacity-6"></span>
+      </div>
+      
+      <div class="card card-body mx-3 mx-md-4 mt-n6">
+        <div class="row gx-4">
+          
+
+
+<div class="col-12 col-xl-4">
+              <div class="card card-plain h-100">
+                <div class="card-header pb-0 p-3">
+                  <div class="row">
+                  <a class="btn btn-secondary mb-3">
+                        <i class="fas fa-user-plus" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Profile"></i>
+                      </a>
+                    <div class="col d-flex align-items-center">
+                        
+                      <h6 class="mb-2">Profile Information</h6>
+                    </div>
+
+
+
+                    <div class="col-md-4 text-end">
+                      <a href="javascript:;">
+                        <i class="fas fa-user-edit text-secondary text-sm mx-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+                      </a>
+                      <a href="javascript:;">
+                        <i class="fas fa-user-minus text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus Profile"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+
+                <?php
+                        // include database
+                        include '../config/database.php';
+                        // perintah sql untuk menampilkan daftar pengguna yang berelasi dengan tabel kategori pengguna
+                        $sql="select * from pengguna order by id_pengguna desc";
+                        $hasil=mysqli_query($kon,$sql);
+                        $no=0;
+                        //Menampilkan data dengan perulangan while
+                        while ($data = mysqli_fetch_array($hasil)):
+                        $no++;
+                    ?>
+
+                <div class="card-body p-3">
+
+
+                <?php
     if (isset($_GET['tambah'])) {
         //Mengecek nilai variabel tambah 
         if ($_GET['tambah']=='berhasil'){
@@ -220,83 +259,20 @@
     }
     ?>
 
-<!-- Table Start -->
-<div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-12">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-            <button type="button" id="btn-tambah-produk" class="btn btn-primary"><span class="text"><i class="fas fa-plus fa-sm m-2"></i> Tambah produk</span></button>
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Product table</h6>
-                
+              
+                  <ul class="list-group">
+                    <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Name : </strong><?php echo $data['nama_pengguna']; ?></li>
+                    <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile : </strong><?php echo $data['no_telp']; ?></li>
+                    <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email : </strong><?php echo $data['email']; ?></li>
+                    <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Username : </strong><?php echo $data['username']; ?></li>
+                  </ul>
+                </div>
+                <?php endwhile; ?>
               </div>
+            </div>  
             </div>
-
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-4">No</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Gambar</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Produk</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Deskripsi</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">aksi</th>
-                      
-                    </tr>
-                  </thead>
-
-                  <tbody>
-
-                  <?php
-                        // include database
-                        include '../config/database.php';
-                        // perintah sql untuk menampilkan daftar pengguna yang berelasi dengan tabel kategori pengguna
-                        $sql="select * from produk order by id_produk desc";
-                        $hasil=mysqli_query($kon,$sql);
-                        $no=0;
-                        //Menampilkan data dengan perulangan while
-                        while ($data = mysqli_fetch_array($hasil)):
-                        $no++;
-                    ?>
-                    <tr>
-                    <td class="ps-4"><?php echo $no; ?></td>
-                <td><img  src="../assets/img/produk/<?php echo $data['gambar'];?>" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" width="80px"></td>
-                <td><?php echo $data['judul_produk']; ?></td>
-                <td><?php 
-                          $ambil=$data["deskripsi"];
-                          $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
-                          echo substr($panjang, 0, 50);?></td>
-                
-                <td><?php echo date("d-m-Y",strtotime($data['tanggal'])); ?></td>
-                <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
-
-                <td>   
-                    <button class="btn-edit-produk btn btn-warning btn-circle" id_produk="<?php echo $data['id_produk']; ?>" kode_produk="<?php echo $data['kode_produk']; ?>" data-toggle="tooltip" title="Edit produk" data-placement="top">Edit</button> 
-
-                    <button class="btn-hapus-produk btn btn-danger btn-circle"  id_produk="<?php echo $data['id_produk']; ?>"  gambar="<?php echo $data['gambar']; ?>"  data-toggle="tooltip" title="Hapus produk" data-placement="top">Hapus</button>
-                </td>
-
-                 </tr>
-                    <?php endwhile; ?>
-                  </tbody>
-
-
-                </table>
-
-
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- table end -->
-
-     
+            </div>  
 
 
 
@@ -352,36 +328,33 @@
 
 
 <script>
-
-
-
-    $('#btn-tambah-produk').on('click',function(){
+ $('#btn-tambah-admin').on('click',function(){
         
         $.ajax({
-            url: '../admin/tambah-produk.php',
+            url: 'admin/tambah.php',
             method: 'post',
             success:function(data){
                 $('#tampil_data').html(data);  
-                document.getElementById("judul").innerHTML='Tambah Produk';
+                document.getElementById("judul").innerHTML='Tambah Admin';
             }
         });
         // Membuka modal
         $('#modal').modal('show');
     });
 
-        // fungsi edit produk
-    $('.btn-edit-produk').on('click',function(){
-    
-        var id_produk = $(this).attr("id_produk");
-        var kode_produk = $(this).attr("kode_produk");
-     
+       
+    // fungsi edit pengguna
+    $('.btn-edit').on('click',function(){
+
+        var id_pengguna = $(this).attr("id_pengguna");
+        var kode_pengguna = $(this).attr("kode_pengguna");
         $.ajax({
-            url: '../admin/edit-produk.php',
+            url: 'admin/edit.php',
             method: 'post',
-            data: {id_produk:id_produk,kode_produk:kode_produk},
+            data: {id_pengguna:id_pengguna},
             success:function(data){
                 $('#tampil_data').html(data);  
-                document.getElementById("judul").innerHTML='Edit Produk #'+kode_produk;
+                document.getElementById("judul").innerHTML='Edit pengguna #'+kode_pengguna;
             }
         });
         // Membuka modal
@@ -389,27 +362,27 @@
     });
 
 
-    // fungsi hapus produk
-    $('.btn-hapus-produk').on('click',function(){
 
-        var id_produk = $(this).attr("id_produk");
+
+    // fungsi hapus artikel
+    $('.btn-hapus').on('click',function(){
+
+        var id_pengguna = $(this).attr("id_pengguna");
         var gambar = $(this).attr("gambar");
-        var kategori = $('#kategori').val();
+
         konfirmasi=confirm("Yakin ingin menghapus?")
-        
+
         if (konfirmasi){
             $.ajax({
-                url: '../admin/hapus-produk.php',
+                url: 'admin/hapus.php',
                 method: 'post',
-                data: {id_produk:id_produk,gambar:gambar},
+                data: {id_pengguna:id_pengguna,gambar:gambar},
                 success:function(data){
-                    window.location.href = 'content.php';
+                    window.location.href = 'index.php?halaman=admin&hapus=berhasil';
                 }
             });
         }
-
-     
-    });
+});
 
 </script>
     
