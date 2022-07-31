@@ -94,7 +94,7 @@ session_start();
         <div class="col-sm-12">
             <div class="form-group">
                 <label>Judul Produk:</label>
-                <input name="judul_produk" type="text" class="form-control" placeholder="Masukan nama produk" required>
+                <input name="judul_produk" type="text" class="form-control" placeholder="  Masukan nama produk" required>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ session_start();
     <div class="col-sm-12">
         <div class="form-group">
             <label>Deskripsi:</label>
-            <textarea name="deskripsi" class="form-control" rows="5" placeholder="Tuliskan deskripsinya disini.." required   ></textarea>
+            <textarea name="deskripsi" class="form-control" rows="5" placeholder="  Tuliskan deskripsinya disini.." required   ></textarea>
         </div>
     </div>
     </div>
@@ -115,10 +115,10 @@ session_start();
                 <div id="msg"></div>
                 <label>Gambar:</label>
                 <input type="file" name="gambar" class="file" >
-                    <div class="input-group my-3">
+                    <div class="input-group mb-3 border-radius-lg">
                         <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
                         <div class="input-group-append">
-                                <button type="button" id="pilih_gambar" class="browse btn btn-primary">Pilih Gambar</button>
+                                <button type="button" id="pilih_gambar" class="browse btn btn-primary mx-3">Pilih Gambar</button>
                         </div>
                     </div>
                 <img src="gambar_default.png" id="preview" class="img-thumbnail mb-3">

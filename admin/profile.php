@@ -179,11 +179,11 @@
     
 
 <!-- End Navbar -->
-
+<!-- ('assets/img/background-01.png') -->
 
 <div class="container-fluid px-2 px-md-4">
-      <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
-        <span class="mask  bg-gradient-primary  opacity-6"></span>
+      <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../assets/img/background-01.png');">
+        <span class="mask  bg-gradient-primary  opacity-1"></span>
       </div>
       
       <div class="card card-body mx-3 mx-md-4 mt-n6">
@@ -195,7 +195,7 @@
               <div class="card card-plain h-100">
                 <div class="card-header pb-0 p-3">
                   <div class="row">
-                  <a class="btn btn-secondary mb-3">
+                  <a class="btn btn-secondary mb-3" id="btn-tambah-profile">
                         <i class="fas fa-user-plus" data-bs-toggle="tooltip" data-bs-placement="top" title="Tambah Profile"></i>
                       </a>
                     <div class="col d-flex align-items-center">
@@ -205,14 +205,7 @@
 
 
 
-                    <div class="col-md-4 text-end">
-                      <a href="javascript:;">
-                        <i class="fas fa-user-edit text-secondary text-sm mx-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
-                      </a>
-                      <a href="javascript:;">
-                        <i class="fas fa-user-minus text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus Profile"></i>
-                      </a>
-                    </div>
+
 
                   </div>
                 </div>
@@ -261,10 +254,20 @@
 
               
                   <ul class="list-group">
+                  <div class="ms-auto text-end">
+                      <a class="btn-edit" id_pengguna="<?php echo $data['id_pengguna']; ?>" kode_pengguna="<?php echo $data['kode_pengguna']; ?>">
+                        <i class="fas fa-user-edit text-secondary text-sm mx-3"></i>
+                      </a>
+                      <a class="btn-hapus" id_pengguna="<?php echo $data['id_pengguna']; ?>" kode_pengguna="<?php echo $data['kode_pengguna']; ?>" ><i class="fas fa-user-minus text-secondary text-sm"></i>
+                      </a>
+                      
+
+                    </div>
                     <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Name : </strong><?php echo $data['nama_pengguna']; ?></li>
                     <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile : </strong><?php echo $data['no_telp']; ?></li>
                     <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email : </strong><?php echo $data['email']; ?></li>
                     <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Username : </strong><?php echo $data['username']; ?></li>
+                   
                   </ul>
                 </div>
                 <?php endwhile; ?>
@@ -328,14 +331,14 @@
 
 
 <script>
- $('#btn-tambah-admin').on('click',function(){
+ $('#btn-tambah-profile').on('click',function(){
         
         $.ajax({
-            url: 'admin/tambah.php',
+            url: '../admin/tambah-profile.php',
             method: 'post',
             success:function(data){
                 $('#tampil_data').html(data);  
-                document.getElementById("judul").innerHTML='Tambah Admin';
+                document.getElementById("judul").innerHTML='Tambah Profile';
             }
         });
         // Membuka modal
@@ -349,7 +352,7 @@
         var id_pengguna = $(this).attr("id_pengguna");
         var kode_pengguna = $(this).attr("kode_pengguna");
         $.ajax({
-            url: 'admin/edit.php',
+            url: '../admin/edit-profile.php',
             method: 'post',
             data: {id_pengguna:id_pengguna},
             success:function(data){
@@ -374,11 +377,11 @@
 
         if (konfirmasi){
             $.ajax({
-                url: 'admin/hapus.php',
+                url: '../admin/hapus-profile.php',
                 method: 'post',
                 data: {id_pengguna:id_pengguna,gambar:gambar},
                 success:function(data){
-                    window.location.href = 'index.php?halaman=admin&hapus=berhasil';
+                    window.location.href = 'profile.php';
                 }
             });
         }

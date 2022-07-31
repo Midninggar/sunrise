@@ -225,7 +225,7 @@
       <div class="row">
         <div class="col-12">
           <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="card-header">
             <button type="button" id="btn-tambah-produk" class="btn btn-primary"><span class="text"><i class="fas fa-plus fa-sm m-2"></i> Tambah produk</span></button>
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                 <h6 class="text-white text-capitalize ps-3">Product table</h6>
@@ -331,7 +331,7 @@
         <!-- Bagian header -->
         <div class="modal-header">
             <h4 class="modal-title" id="judul"></h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close btn-danger" data-dismiss="modal">&times;</button>
         </div>
 
         <!-- Bagian body -->
