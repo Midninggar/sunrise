@@ -110,22 +110,22 @@ session_start();
 
     <!-- rows -->                 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 mb-3">
         <label>Gambar Saat ini:</label>
-            <img src="../assets/img/ourclient/<?php echo $data['gambar'];?>" class="rounded" width="90%" alt="Gambar tidak ditemukan">
+            <img src="../assets/img/ourclient/<?php echo $data['gambar'];?>" class="rounded mb-2" width="100%" alt="Gambar tidak ditemukan">
             <input type="text" name="gambar_saat_ini" value="<?php echo $data['gambar'];?>" class="form-control" />
         </div>
         <div class="col-sm-6">
             <div id="msg"></div>
             <label>Gambar Baru:</label>
             <input type="file" name="gambar_baru" class="file" >
-                <div class="input-group my-3">
-                    <input type="text" class="form-control" disabled placeholder="Upload File" id="file">
+                <div class="input-group my-3 border-radius-lg">
+                    <input type="text" class="form-control " disabled placeholder="Upload File" id="file">
                     <div class="input-group-append">
-                            <button type="button" id="pilih_gambar" class="browse btn btn-dark">Pilih Gambar</button>
+                            <button type="button" id="pilih_gambar" class="browse btn btn-dark mx-3">Pilih Gambar</button>
                     </div>
                 </div>
-            <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
+            <img src="gambar_default.png" id="preview" class="img-thumbnail">
         </div>
     </div>
 
@@ -138,12 +138,12 @@ session_start();
             <label>Status:</label>
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                    <input type="radio" <?php if ($data['status']==1) echo "checked"; ?> class="form-check-input" name="status" value="1">Publish
+                    <input type="radio" <?php if ($data['status']==1) echo "checked"; ?> class="form-check-input mx-2" name="status" value="1">Publish
                     </label>
                 </div>
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                    <input type="radio" <?php if ($data['status']==0) echo "checked"; ?> class="form-check-input" name="status" value="0">Konsep
+                    <input type="radio" <?php if ($data['status']==0) echo "checked"; ?> class="form-check-input mx-2" name="status" value="0">Konsep
                     </label>
                 </div>
             </div>

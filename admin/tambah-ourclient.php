@@ -91,7 +91,7 @@ session_start();
     </div>
     <!-- rows -->
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 mb-1">
             <div class="form-group">
                 <label>Nama Client:</label>
                 <input name="nama_client" type="text" class="form-control" placeholder="Masukan nama client" required>
@@ -107,10 +107,10 @@ session_start();
                 <div id="msg"></div>
                 <label>Gambar:</label>
                 <input type="file" name="gambar" class="file" >
-                    <div class="input-group my-3">
+                    <div class="input-group mb-3 border-radius-lg">
                         <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
                         <div class="input-group-append">
-                                <button type="button" id="pilih_gambar" class="browse btn btn-primary">Pilih Gambar</button>
+                                <button type="button" id="pilih_gambar" class="browse btn btn-primary mx-3">Pilih Gambar</button>
                         </div>
                     </div>
                 <img src="gambar_default.png" id="preview" class="img-thumbnail mb-3">

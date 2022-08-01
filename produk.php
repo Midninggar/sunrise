@@ -132,23 +132,23 @@
 </div>
 
 
-     <!-- Footer Start -->
-     <div
-      class="container-fluid bg-light text-white mt-5 py-5 px-sm-3 px-md-5"
+  <!-- Footer Start -->
+  <div
+      class="container-fluid bg-light text-white mt-5 py-5 px-sm-5 px-md-5"
     >
-      <div class="row pt-3">
-        <div class="col-lg-4 mb-5">
-          <a class="navbar-brand px-md-5 mb-5" href="#">
+      <div class="row pt-1">
+        <div class="col-lg-6 px-5">
+          <a class="navbar-brand px-md-1 mb-2" href="#">
             <img src="assets/img/logo2.png" alt="" width="200" ></a>
           <p>
-            Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea
-            dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr
-            stet diam duo eos rebum ipsum diam ipsum elitr.
+          Tim kami terdiri dari banyak individu berbakat. Tim desain akan membantu mengembangkan produk.
+          Tim produksi dilengkapi dengan mesin Heidelberg, yang dikenal sebagai pemasok terkemuka dunia untuk perusahaan percetakan komersial, pengemasan dan label. Mereka akan bekerja secara efisien dan berusaha memberikan hasil terbaik.
+          Ada juga Quality Control untuk memastikan semua produk memenuhi standar dan siap dikirim ke pelanggan.
           </p>
 
         </div>
-        <div class="col-lg-4 mb-5 ">
-          <h3 class="text-primary mb-5">Get In Touch</h3>
+        <div class="col-lg-3 mb-3 ">
+          <h3 class="text-primary mb-3">Get In Touch</h3>
           <div class="d-flex">
             <h4 class="fa fa-map-marker-alt text-primary"></h4>
             <div class="pl-3">
@@ -172,22 +172,22 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5">
-          <h3 class="text-primary mb-4">Quick Links</h3>
+        <div class="col-lg-2 mb-3 ">
+          <h3 class="text-primary mb-3">Quick Links</h3>
           <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="index.php"
               ><i class="fa fa-angle-right mr-2"></i>Home</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="service.php"
               ><i class="fa fa-angle-right mr-2"></i>Service</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="alat.php"
               ><i class="fa fa-angle-right mr-2"></i>Alat</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="penawaran.php"
               ><i class="fa fa-angle-right mr-2"></i>Penawaran Harga</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="kontak.php"
               ><i class="fa fa-angle-right mr-2"></i>Kontak</a
             >
 

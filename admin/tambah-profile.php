@@ -53,7 +53,7 @@
 
         <div class="row">
  
-            <div class="col-sm-6">
+            <div class="col-sm-6 mb-3">
                 <div class="form-group">
                     <label>Status:</label>
                     <select name="status" class="form-control">

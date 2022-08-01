@@ -82,12 +82,12 @@
       <div class="row align-items-center px-3">
         <div class="col-lg-6 text-center text-lg-left px-md-5">
           <h1 class="display-3 font-weight-bold text-white">
-            Design Production Quality Control
+          Design Production Best Quality
           </h1>
           <p class="mb-4">
-            Our teams are consists of many talented individu make efforts to give the best output.
+          Kami menyediakan perlengkapan kantor, label dan kemasan produk, alat promosi untuk bisnis Anda, dan masih banyak lagi kebutuhan percetakan lainnya. Kami menawarkan harga yang kompetitif dan juga dapat disesuaikan dengan budget Anda.
           </p>
-          <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+          
         </div>
           <img src="assets/img/background-01.png" alt="" class="img-bg h-100 position-absolute top-0" />
 
@@ -103,11 +103,11 @@
 
     <!-- Facilities Start -->
     <div class="container-fluid pt-5" >
-      <div class="container pb-3 pt-5 " >
+      <div class="container pb-3 pt-5  " >
         <div class="row">
 
-          <div class="col-lg-4 mb-4">
-            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+          <div class="col-lg-4 mb-4 ">
+            <div class="d-flex bg-light shadow rounded" style="padding :50px; height:350px;">
               <div>
                 <h4>Produksi Cepat & Kualitas Tinggi</h4>
                 <p>
@@ -118,7 +118,7 @@
           </div>
 
           <div class="col-lg-4 mb-4">
-            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+            <div class="d-flex bg-light shadow rounded" style="padding :50px; height:350px;">
               <div>
                 <h4>Offset Print tersedia</h4>
                 <p>
@@ -129,7 +129,7 @@
           </div>
 
           <div class="col-lg-4 mb-4">
-            <div class="d-flex bg-light shadow-sm" style="padding :50px; height:350px;">
+            <div class="d-flex bg-light shadow rounded" style="padding :50px; height:350px;">
               <div>
                 <h4>Designer tersedia</h4>
                 <p>
@@ -205,23 +205,23 @@
     
 
     <!-- Our CLient start-->
-    <div class="container-fluid py-5">
-      <div class="container p-0">
+    <div class="container-fluid  py-5">
+      <div class="container  p-0">
         <div class="text-center pb-2">
           <p class="section-title px-5">
             <span class="px-2">Our</span>
           </p>
           <h1 class="mb-4">Client</h1>
         </div>
-        <div class="owl-carousel testimonial-carousel">
+        <div class="owl-carousel testimonial-carousel bg-light rounded-pill">
 
         <?php
          
          include 'config/database.php';
          if (isset($_GET['id_logoclient'])) {
-             $sql="select * from ourclient where status=1 and id_logoclient=".$_GET['id_logoclient']." order by id_logoclient desc limit 3";
+             $sql="select * from ourclient where status=1 and id_logoclient=".$_GET['id_logoclient']." order by id_logoclient desc";
          }else {
-             $sql="select * from ourclient where status=1 order by id_logoclient desc limit 3";
+             $sql="select * from ourclient where status=1 order by id_logoclient desc";
          }
      
          
@@ -231,9 +231,9 @@
              while ($data = mysqli_fetch_array($hasil)):
          ?>
 
-          <div class="testimonial-item px-3">
-            <div class="bg-light shadow-sm rounded mb-4 p-4">
-            <a class="navbar-brand" href="#"><img src="assets/img/ourclient/<?php echo $data['gambar'];?>" width="100" alt="Gambar tidak ditemukan"></a>
+          <div class="testimonial-item px-3 py-3 mx-auto " style="width:250px;">
+            <div class="bg-white  shadow-sm rounded-pill px-5" >
+            <a class="navbar-brand mx-auto" href="#"><img src="assets/img/ourclient/<?php echo $data['gambar'];?>" width="100%" alt="Gambar tidak ditemukan"></a>
             
               
             </div>
@@ -252,21 +252,21 @@
 
     <!-- Footer Start -->
     <div
-      class="container-fluid bg-light text-white mt-5 py-5 px-sm-3 px-md-5"
+      class="container-fluid bg-light text-white mt-5 py-5 px-sm-5 px-md-5"
     >
-      <div class="row pt-3">
-        <div class="col-lg-4 mb-5">
-          <a class="navbar-brand px-md-5 mb-5" href="#">
+      <div class="row pt-1">
+        <div class="col-lg-6 px-5">
+          <a class="navbar-brand px-md-1 mb-2" href="#">
             <img src="assets/img/logo2.png" alt="" width="200" ></a>
           <p>
-            Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea
-            dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr
-            stet diam duo eos rebum ipsum diam ipsum elitr.
+          Tim kami terdiri dari banyak individu berbakat. Tim desain akan membantu mengembangkan produk.
+          Tim produksi dilengkapi dengan mesin Heidelberg, yang dikenal sebagai pemasok terkemuka dunia untuk perusahaan percetakan komersial, pengemasan dan label. Mereka akan bekerja secara efisien dan berusaha memberikan hasil terbaik.
+          Ada juga Quality Control untuk memastikan semua produk memenuhi standar dan siap dikirim ke pelanggan.
           </p>
 
         </div>
-        <div class="col-lg-4 mb-5 ">
-          <h3 class="text-primary mb-5">Get In Touch</h3>
+        <div class="col-lg-3 mb-3 ">
+          <h3 class="text-primary mb-3">Get In Touch</h3>
           <div class="d-flex">
             <h4 class="fa fa-map-marker-alt text-primary"></h4>
             <div class="pl-3">
@@ -290,22 +290,22 @@
           </div>
         </div>
 
-        <div class="col-lg-4 mb-5">
-          <h3 class="text-primary mb-4">Quick Links</h3>
+        <div class="col-lg-2 mb-3 ">
+          <h3 class="text-primary mb-3">Quick Links</h3>
           <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="index.php"
               ><i class="fa fa-angle-right mr-2"></i>Home</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="service.php"
               ><i class="fa fa-angle-right mr-2"></i>Service</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="alat.php"
               ><i class="fa fa-angle-right mr-2"></i>Alat</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="penawaran.php"
               ><i class="fa fa-angle-right mr-2"></i>Penawaran Harga</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="kontak.php"
               ><i class="fa fa-angle-right mr-2"></i>Kontak</a
             >
 

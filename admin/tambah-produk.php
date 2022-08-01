@@ -91,20 +91,20 @@ session_start();
     </div>
     <!-- rows -->
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 mb-1">
             <div class="form-group">
                 <label>Judul Produk:</label>
-                <input name="judul_produk" type="text" class="form-control" placeholder="  Masukan nama produk" required>
+                <input name="judul_produk" type="text" class="form-control" placeholder="Masukan nama produk" required>
             </div>
         </div>
     </div>
 
     <!-- rows -->   
     <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 mb-2">
         <div class="form-group">
             <label>Deskripsi:</label>
-            <textarea name="deskripsi" class="form-control" rows="5" placeholder="  Tuliskan deskripsinya disini.." required   ></textarea>
+            <textarea name="deskripsi" class="form-control" rows="5" placeholder="Tuliskan deskripsinya disini.." required   ></textarea>
         </div>
     </div>
     </div>

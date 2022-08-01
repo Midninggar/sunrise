@@ -6561,6 +6561,7 @@ button.bg-dark:focus {
   border-radius: 50rem !important;
 }
 
+
 .rounded-0 {
   border-radius: 0 !important;
 }
@@ -9865,7 +9866,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .testimonial-carousel .owl-dot.active {
-  background: #17a2b8;
+  background: #333399;
 }
 
 .contact-form .help-block ul {

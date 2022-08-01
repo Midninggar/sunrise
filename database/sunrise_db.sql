@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Jul 2022 pada 18.35
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.1.1
+-- Waktu pembuatan: 01 Agu 2022 pada 11.17
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -94,8 +94,21 @@ CREATE TABLE `ourclient` (
 --
 
 INSERT INTO `ourclient` (`id_logoclient`, `kode_logo`, `nama_client`, `gambar`, `tanggal`, `status`) VALUES
-(13, 'L0013', 'gdsdbsk', 'flyer_1.jpg', '2022-07-30 13:52:17', 1),
-(14, 'L0014', 'wed', 'wedding_1.jpg', '2022-07-28 11:07:21', 1);
+(15, 'L0015', 'Azarine', 'Azarine-01.png', '2022-08-01 08:41:55', 1),
+(16, 'L0016', 'Asiaskinlab', 'Asiaskinlab-01.png', '2022-08-01 08:42:24', 1),
+(17, 'L0017', 'Kana', 'Kana-01.png', '2022-08-01 08:42:41', 1),
+(18, 'L0018', 'Riway', 'Riway-01.png', '2022-08-01 09:26:06', 1),
+(19, 'L0019', 'swpi', 'Swpi-01.png', '2022-08-01 09:26:26', 1),
+(20, 'L0020', 'Domino', 'Domino-01.png', '2022-08-01 09:26:42', 1),
+(21, 'L0021', 'Agro', 'Agro-01.png', '2022-08-01 09:35:25', 1),
+(22, 'L0022', 'Biogene', 'Biogene-01.png', '2022-08-01 09:39:31', 1),
+(23, 'L0023', 'Hucha', 'Hucha-01.png', '2022-08-01 09:40:03', 1),
+(24, 'L0024', 'Yonghong', 'Yonghong-01.png', '2022-08-01 09:40:25', 1),
+(25, 'L0025', 'Patata', 'Patata-01.png', '2022-08-01 09:40:43', 1),
+(26, 'L0026', 'Anita', 'Anita-01.png', '2022-08-01 09:41:03', 1),
+(27, 'L0027', 'Morin', 'Morin-01.png', '2022-08-01 09:41:24', 1),
+(28, 'L0028', 'Gado Arjuna', 'Gado Ar-01.png', '2022-08-01 09:41:41', 1),
+(29, 'L0029', 'Cv Mulia', 'Mulia-01.png', '2022-08-01 09:41:56', 1);
 
 -- --------------------------------------------------------
 
@@ -146,7 +159,8 @@ INSERT INTO `produk` (`id_produk`, `kode_produk`, `judul_produk`, `deskripsi`, `
 (98, 'A0094', 'Buah buahan', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&lt;/p&gt;', 'fruit.png', '2021-07-13 10:16:03', 1, 0),
 (101, 'A0101', 'smartphone', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &amp;nbsp; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim &amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. &amp;nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&lt;/p&gt;', 'tekno hp.png', '2021-07-13 09:28:39', 1, 0),
 (119, 'A0107', 'Baju Putih Polos', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna', 'anomaly-WWesmHEgXDs-unsplash.jpg', '2022-07-29 18:37:59', 1, 0),
-(106, 'A0106', 'Hamburger', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, \r\n\r\n&lt;p&gt;exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &amp;nbsp; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim &amp;nbsp;&lt;/p&gt;\r\n\r\n\r\n&lt;p&gt;adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&lt;/p&gt;', 'Desain tanpa judul(9).png', '2022-07-27 16:50:48', 1, 0);
+(106, 'A0106', 'Hamburger', 'exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &amp;nbsp; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim &amp;nbsp;&lt;/p&gt;', 'Desain tanpa judul(9).png', '2022-08-01 04:58:58', 1, 0),
+(122, 'A0120', 'Kosmetik Packaging', 'Kemasan untuk Kosmetik....', '20220213_102506 (1).jpg', '2022-08-01 10:15:44', 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -206,7 +220,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT untuk tabel `ourclient`
 --
 ALTER TABLE `ourclient`
-  MODIFY `id_logoclient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_logoclient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengguna`
@@ -218,7 +232,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
