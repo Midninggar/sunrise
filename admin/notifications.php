@@ -225,6 +225,8 @@
                     <span class="mb-2 text-xs">Phone : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['phone'];?></span></span>
                     <span class="mb-2 text-xs">Company : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['company'];?></span></span>
                     <span class="mb-2 text-xs">Website : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo $data['website'];?></span></span>
+                    <span class="mb-2 text-xs">Time : <span class="text-dark ms-sm-2 font-weight-bold"><?php echo date("d-m-Y H:i ( l )",strtotime($data['tanggal'])); ?></span></span>
+                    
                     <span class=" text-sm">Pesan : <span class="text-dark ms-sm-2 "></span></span>
                     <div class="col">
                       <span><?php echo $data['pesan'];?></span>
