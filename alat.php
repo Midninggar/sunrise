@@ -98,7 +98,7 @@
           <h1 class="mb-4">Engineer</h1>
         </div>
 
-          <div class=" owl-carousel testimonial-carousel bg-light rounded-pill">
+          <div class=" owl-carousel testimonial-carousel bg-light ">
 
           
               <div class="carousel-item active">

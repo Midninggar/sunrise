@@ -1,4 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
 
@@ -42,6 +49,7 @@
     $query = mysqli_query ($kon,"select * from produk  where id_produk='".$id_produk."' limit 1");
     $data = mysqli_fetch_assoc($query); 
 ?>
+ </head>
 <body>
 <div class="container-fluid bg-light  position-relative shadow navbar-brand mb-5">
 <nav
@@ -79,40 +87,41 @@
 
 <div class="row">
     <div class="col-lg-6 mx-auto">
-        <div class="thumbnail">
+        <div class="thumbnail rounded p-5 shadow mb-5 ">
 
-        <img src="assets/img/produk/<?php echo $data['gambar'];?>" width="100%"  class="card-img-top mb-4" alt="Gambar tidak ditemukan">
+        <img src="assets/img/produk/<?php echo $data['gambar'];?>" width="100%"  class="card-img-top mb-4 rounded" alt="Gambar tidak ditemukan">
            
-            <div class="caption text-center">
+            <div class="caption text-center mb-5">
             <h1><?php echo $data['judul_produk'];?></h1>
 
                 <?php
                 echo strip_tags(html_entity_decode($data["deskripsi"],ENT_QUOTES,"ISO-8859-1"));
                  ?>
-                <hr>
+                
+            </div>
+            <div class="text-center bg-light shadow rounded-pill">
+            <a href="penawaran.php" class="btn  btn-primary shadow-sm w-50 my-2" role="button">Buat Penawaran</a>
             </div>
 
-
- 
-
         </div>
+        
     </div>
 
 
-    <div class="col-lg-4">
-        <div class="row">
+    <div class="col-lg-5">
+        <div class="row ">
             <?php
                 include 'config/database.php';
-                $sql="select * from produk where status=1 order by id_produk desc";
+                $sql="select * from produk where status=1 order by id_produk desc limit 4";
                 $hasil=mysqli_query($kon,$sql);
                 while ($data = mysqli_fetch_array($hasil)):
             ?>
-            <div class="col-sm-12">
+            <div class="col-sm-12 shadow rounded py-3 mb-3">
                 <div class="caption">
                     <h4><a class="text-dark" href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><?php echo $data['judul_produk'];?></a></h4>
                     <div class="row">
                         <div class="col-lg-3">
-                            <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>"  width="100%" alt="Gambar tidak ditemukan" ></a>
+                            <a  href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>"  width="100%" alt="Gambar tidak ditemukan" class="bg-light rounded p-2" ></a>
                         </div>
                         <div class="col-sm-9">
                             <?php
@@ -218,3 +227,5 @@
 <script src="..admin/assets/js/plugins/smooth-scrollbar.min.js" ></script>
 
 </body>
+
+</html>

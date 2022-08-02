@@ -29,12 +29,16 @@
 
         //Kondisi apakah berhasil atau tidak dalam mengeksekusi query diatas
         if ($hasil) {
-            header("Location:penawaran.php?");
-        }
-        else {
-            header("Location:penawaran.php?");
+            echo '<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+<strong> Sukses..!</strong> Data Berhasil Tersimpan.
+</div>';
+echo '<meta http-equiv="refresh" content="3;url=penawaran.php">';
+        
 
         }
         
+        
     }
 ?>
+

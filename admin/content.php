@@ -18,7 +18,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+
 
 
     <!--logo title-->
@@ -44,7 +44,7 @@
 
 
 
-<link id="pagestyle" href="../admin/assets/css/material-dashboard.css" rel="stylesheet" />
+<link id="pagestyle" href="../admin/assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -54,12 +54,7 @@
 
 
   <body class="g-sidenav-show  bg-gray-100">
-    
-
-    
-
-    
-      <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-white" id="sidenav-main">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-white" id="sidenav-main">
 
   <div class="sidenav-header">
     <i class="fas fa-times p-3 cursor-pointer text-primary position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -73,15 +68,7 @@
 
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
-      
 
-      
-        
-
-          
-
-          
-  
 <li class="nav-item">
   <a class="nav-link text-dark " href="./index.php">
     
@@ -157,23 +144,11 @@
     <span class="nav-link-text ms-1">Logout</span>
   </a>
 </li>
-
-  
-
-
-
-          
-
-        
-      
     </ul>
   </div>
-  
-
-  
 </aside>
 
-      <main class="main-content border-radius-lg ">
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
 
 <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
@@ -185,8 +160,21 @@
         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">content</li>
       </ol>
       <h6 class="font-weight-bolder mb-0">content</h6>
-      
+
   </nav>
+  <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+      <ul class="navbar-nav  justify-content-end">
+      <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="#" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+</ul>
+</div>
   </div>
   </nav>
     
@@ -414,14 +402,14 @@
 </script>
     
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 
 <!--   Core JS Files   -->
-<script src="..admin/assets/js/core/popper.min.js" ></script>
-<script src="..admin/assets/js/core/bootstrap.min.js" ></script>
-<script src="..admin/assets/js/plugins/perfect-scrollbar.min.js" ></script>
-<script src="..admin/assets/js/plugins/smooth-scrollbar.min.js" ></script>
-
+<script src="../admin/assets/js/core/popper.min.js" ></script>
+<script src="../admin/assets/js/core/bootstrap.min.js" ></script>
+<script src="../admin/assets/js/plugins/perfect-scrollbar.min.js" ></script>
+<script src="../admin/assets/js/plugins/smooth-scrollbar.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <script>
   var win = navigator.platform.indexOf('Win') > -1;

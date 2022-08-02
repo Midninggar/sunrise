@@ -174,22 +174,22 @@
              while ($data = mysqli_fetch_array($hasil)):
          ?>
      
-       <div class="col-lg-4 mb-4"  >
-       <div class="card border-0 shadow-sm mb-2 bg-primary"  style="width: 100%; height: 450px;">
-           <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>" width="250" height="250px" class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
-     
-             <div class="card-body bg-light text-center p-4" >
-               <h4 class="card-title" ><?php echo $data['judul_produk'];?></h4>
-               <p class="card-text" ><?php 
-                               $ambil=$data["deskripsi"];
-                               $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
-                               echo substr($panjang, 0, 100);?></p>
-     
-                               
-             </div>
-             <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn  btn-primary  px-4 mx-auto my-2" role="button">Selengkapnya</a>
-         </div>
-         </div>
+     <div class="col-lg-4 mb-4"  >
+  <div class="card border-0 shadow mb-5 bg-primary p-2 mx-auto" style="width: 300px; height: 480px;">
+      <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>" style="width: 100%; height: 100%px;"><img src="assets/img/produk/<?php echo $data['gambar'];?>" max-width="100%" max-height="100%" class="card-img-top mb-2" alt="Gambar tidak ditemukan"></a>
+
+        <div class="card-body bg-light mb-2 text-center" >
+          <h4 class="card-title" ><?php echo $data['judul_produk'];?></h4>
+          <p class="card-text" ><?php 
+                          $ambil=$data["deskripsi"];
+                          $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
+                          echo substr($panjang, 0, 50);?></p>
+
+                          
+        </div>
+        <a href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>" class="btn  btn-primary shadow-sm px-4 mx-auto my-2" role="button">Selengkapnya</a>
+    </div>
+    </div>
          <?php 
                  endwhile;
              }else {
@@ -213,7 +213,7 @@
           </p>
           <h1 class="mb-4">Client</h1>
         </div>
-        <div class="owl-carousel testimonial-carousel bg-light rounded-pill">
+        <div class="owl-carousel testimonial-carousel shadow bg-light rounded-pill">
 
         <?php
          
