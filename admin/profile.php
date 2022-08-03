@@ -5,14 +5,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-
-
-    <!--logo title-->
-    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
-    <title>Sunrise Offset Printing</title>
-
-
+<!--logo title-->
+<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+<title>Sunrise Offset Printing</title>
 
 <!--     Fonts and icons     -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -41,12 +36,7 @@
 
 
   <body class="g-sidenav-show  bg-gray-100">
-    
-
-    
-
-    
-      <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-white" id="sidenav-main">
+ <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-white" id="sidenav-main">
 
   <div class="sidenav-header">
     <i class="fas fa-times p-3 cursor-pointer text-primary position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -60,15 +50,7 @@
 
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
-      
 
-      
-        
-
-          
-
-          
-  
 <li class="nav-item">
   <a class="nav-link text-dark " href="./index.php">
     
@@ -134,25 +116,16 @@
 </li>
 
   
-<li class="nav-item">
-  <a class="nav-link text-dark " href="./logout.php">
-    
-      <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
-        <i class="material-icons opacity-10">logout</i>
-      </div>
-    
-    <span class="nav-link-text ms-1">Logout</span>
-  </a>
-</li>
-
-  
-
-
-
+      <li class="nav-item">
+        <a class="nav-link text-dark " href="./logout.php">
           
-
-        
-      
+            <div class="text-dark text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">logout</i>
+            </div>
+          
+          <span class="nav-link-text ms-1">Logout</span>
+        </a>
+      </li>  
     </ul>
   </div>
   
@@ -161,7 +134,7 @@
 </aside>
 
       <main class="main-content border-radius-lg ">
-        <!-- Navbar -->
+<!-- Navbar start -->
 
 <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
   <div class="container-fluid py-1 px-3">
@@ -179,7 +152,8 @@
     
 
 <!-- End Navbar -->
-<!-- ('assets/img/background-01.png') -->
+
+<!-- Content Profile start -->
 
 <div class="container-fluid px-2 px-md-4">
       <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('../assets/img/background-01.png');">
@@ -224,34 +198,6 @@
 
                 <div class="card-body p-3">
 
-
-                <?php
-    if (isset($_GET['tambah'])) {
-        //Mengecek nilai variabel tambah 
-        if ($_GET['tambah']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di tambahkan!</div>";
-        }else if ($_GET['tambah']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di tambahkan!</div>";
-        }    
-    }
-    if (isset($_GET['edit'])) {
-        //Mengecek nilai variabel edit 
-        if ($_GET['edit']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di edit!</div>";
-        }else if ($_GET['edit']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di edit!</div>";
-        }    
-      }
-    if (isset($_GET['hapus'])) {
-        //Mengecek nilai variabel hapus 
-        if ($_GET['hapus']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di hapus!</div>";
-        }else if ($_GET['hapus']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di hapus!</div>";
-        }    
-    }
-    ?>
-
               
                   <ul class="list-group">
                   <div class="ms-auto text-end">
@@ -278,7 +224,7 @@
             </div>  
 
 
-
+<!-- Content Profile end -->
 
 
 <footer class="footer py-4 w-100  ">
