@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Agu 2022 pada 11.48
--- Versi server: 10.4.13-MariaDB
--- Versi PHP: 7.4.7
+-- Waktu pembuatan: 05 Agu 2022 pada 18.12
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -72,7 +72,8 @@ CREATE TABLE `message` (
 
 INSERT INTO `message` (`id_message`, `nama`, `email`, `phone`, `company`, `website`, `pesan`, `tanggal`) VALUES
 (5, 'Mid', 'sdfhhgjgh@gmail.com', 2147483647, 'Midrobe', 'dfgdhdgfdgf.com', 'gdkdkcasad kahskakscsac', '2022-07-29 19:54:40'),
-(9, 'sark', 'Jeshmrwi@yahoo.com', 2147483647, '', '', 'dsdgfhfdhfdg', '2022-07-29 20:25:57');
+(26, 'sark', 'Jeshmrwi@yahoo.com', 2147483647, 'sdsdsda', 'dfgdhdgfdgf.com', 'sgfsgfahfla', '2022-08-02 15:05:40'),
+(27, 'Mid', 'hamrosreymid@gmail.com', 2147483647, 'Midrobe', 'dfgdhdgfdgf.com', 'jsgfkhsdldvd', '2022-08-02 15:36:25');
 
 -- --------------------------------------------------------
 
@@ -200,8 +201,8 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`),
-  ADD UNIQUE KEY `judul_artikel` (`judul_produk`),
-  ADD KEY `id_artikel` (`id_produk`);
+  ADD KEY `id_artikel` (`id_produk`),
+  ADD KEY `judul_artikel` (`judul_produk`) USING BTREE;
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -217,7 +218,7 @@ ALTER TABLE `komentar`
 -- AUTO_INCREMENT untuk tabel `message`
 --
 ALTER TABLE `message`
-  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `ourclient`
@@ -235,7 +236,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,5 +1,10 @@
 
-
+<?php 
+  session_start();
+  if (!$_SESSION["id_pengguna"]){
+        header('Location:./index.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

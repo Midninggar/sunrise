@@ -26,10 +26,10 @@ session_start();
             $kode_produk=input($_POST["kode_produk"]);
             $judul_produk=input($_POST["judul_produk"]);
             
-            
+            $id_pengguna=input($_SESSION["id_pengguna"]);          
             $deskripsi=input($_POST["deskripsi"]);
             $tanggal=date("Y-m-d H:i:s");
-            $ekstensi_diperbolehkan	= array('png','jpg');
+            $ekstensi_diperbolehkan	= array('png','jpg','jpeg');
             $gambar = $_FILES['gambar']['name'];
             $x = explode('.', $gambar);
             $ekstensi = strtolower(end($x));
@@ -42,14 +42,14 @@ session_start();
                     move_uploaded_file($file_tmp, '../assets/img/produk/'.$gambar);
 
                     //Menambah produk dengan gambar
-                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status) values
-                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status')";
+                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status,id_pengguna) values
+                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status','$id_pengguna')";
                 }    
                 
             }else {
                     //Menambah produk tanpa gambar, maka gambar_defauilt.png yang akan digunakan
-                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status) values
-                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status')";
+                    $sql="insert into produk (kode_produk,judul_produk,deskripsi,gambar,tanggal,status,id_pengguna) values
+                    ('$kode_produk','$judul_produk','$deskripsi','$gambar','$tanggal','$status','$id_pengguna')";
                      
             }
 
