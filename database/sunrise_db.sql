@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Agu 2022 pada 18.12
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.1.1
+-- Waktu pembuatan: 06 Agu 2022 pada 07.36
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -133,7 +133,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `kode_pengguna`, `nama_pengguna`, `email`, `no_telp`, `username`, `password`, `status`) VALUES
-(21, 'U020', 'hamid', 'hamrosjhonkren@gmail.com', '081259130203', 'hamid', '827ccb0eea8a706c4c34a16891f84e7b', 1);
+(21, 'U020', 'hamid', 'hamrosjhonkren@gmail.com', '081259130203', 'hamid', '827ccb0eea8a706c4c34a16891f84e7b', 1),
+(25, 'U022', 'abdul', 'abdhamidninggar@gmail.com', '081259130203', 'abdul', 'e10adc3949ba59abbe56e057f20f883e', 1);
 
 -- --------------------------------------------------------
 
@@ -160,11 +161,8 @@ INSERT INTO `produk` (`id_produk`, `kode_produk`, `judul_produk`, `deskripsi`, `
 (124, 'A0124', 'Paperbag', 'dsakfhlfjsdf', 'Paperbag-01.png', '2022-08-02 10:40:07', 1, 0),
 (125, 'A0125', 'Kemasan Produk', 'dfsghjdgfsg', 'Kemasan Produk-01.png', '2022-08-02 10:40:29', 1, 0),
 (126, 'A0126', 'Amplop', 'dfsgdfshds', 'Amplop-01.png', '2022-08-02 10:40:50', 1, 0),
-(127, 'A0127', 'Buku &amp; Cover', 'dsfgdhfds', 'Buku & Cover-01.png', '2022-08-02 10:42:13', 1, 0),
-(128, 'A0128', 'Catalog', 'dfbgfdbs', 'Catalog-01.png', '2022-08-02 10:42:29', 1, 0),
-(129, 'A0129', 'Hampers', 'sdfsdvsdvc', 'Hampers-01.png', '2022-08-02 10:42:43', 1, 0),
-(130, 'A0130', 'Kertas Roti', 'xzdvbvdfsv', 'Kertas Roti-01.png', '2022-08-02 10:43:04', 1, 0),
-(123, 'A0120', 'Kemasan Kosmetik', 'kjshakdhfjasd', 'Kemasan Kosmetik-01.png', '2022-08-02 06:32:12', 1, 0);
+(137, 'A0137', 'Buah buahan', 'regterg', 'Cylinder-Set-Master-45530KVY911.png', '2022-08-06 06:04:46', 1, 25),
+(136, 'A0131', 'smartphone', 'rdh', 'Cylinder-Set-Master-45530KVY911.jpg', '2022-08-06 04:41:11', 1, 21);
 
 --
 -- Indexes for dumped tables
@@ -230,13 +228,13 @@ ALTER TABLE `ourclient`
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -10,8 +10,8 @@ session_start();
 
     //Menghapus gambar, gambar yang dihapus jika selain gambar default
     if ($gambar!='gambar_default.png'){
-        unlink("gambar/".$gambar);
-    }
+        unlink("../assets/img/produk/".$gambar);
+    } 
  
 
 ?>

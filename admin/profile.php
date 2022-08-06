@@ -1,3 +1,9 @@
+<?php 
+  session_start();
+  if (!$_SESSION["id_pengguna"]){
+        header('Location:../login.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -209,6 +215,7 @@
                       
 
                     </div>
+                    <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">ID : </strong><?php echo $data['id_pengguna']; ?></li>
                     <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Name : </strong><?php echo $data['nama_pengguna']; ?></li>
                     <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile : </strong><?php echo $data['no_telp']; ?></li>
                     <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email : </strong><?php echo $data['email']; ?></li>

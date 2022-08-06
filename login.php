@@ -51,6 +51,11 @@ $pesan="";
         }
     
         include "config/database.php";
+        error_reporting(0);
+        session_start();
+        if (isset($_SESSION['username'])){
+          header("Location: admin/index.php");
+        }
     
         $username = input($_POST["username"]);
         $password = input(md5($_POST["password"]));

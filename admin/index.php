@@ -2,24 +2,12 @@
 <?php 
   session_start();
   if (!$_SESSION["id_pengguna"]){
-        header('Location:./index.php');
+        header('Location:../login.php');
   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <meta charset="utf-8" />

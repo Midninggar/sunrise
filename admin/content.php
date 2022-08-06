@@ -1,19 +1,13 @@
+<?php 
+  session_start();
+  if (!$_SESSION["id_pengguna"]){
+        header('Location:../login.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -182,32 +176,7 @@
 
 <!-- End Navbar -->
 
-<?php
-    if (isset($_GET['tambah'])) {
-        //Mengecek nilai variabel tambah 
-        if ($_GET['tambah']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di tambahkan!</div>";
-        }else if ($_GET['tambah']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di tambahkan!</div>";
-        }    
-    }
-    if (isset($_GET['edit'])) {
-        //Mengecek nilai variabel edit 
-        if ($_GET['edit']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di edit!</div>";
-        }else if ($_GET['edit']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di edit!</div>";
-        }    
-      }
-    if (isset($_GET['hapus'])) {
-        //Mengecek nilai variabel hapus 
-        if ($_GET['hapus']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di hapus!</div>";
-        }else if ($_GET['hapus']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di hapus!</div>";
-        }    
-    }
-    ?>
+
 
 <!-- Table Start -->
 <div class="container-fluid py-4">
@@ -231,6 +200,7 @@
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Gambar</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Produk</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Deskripsi</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Admin ID</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">aksi</th>
@@ -259,7 +229,7 @@
                           $ambil=$data["deskripsi"];
                           $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));
                           echo substr($panjang, 0, 50);?></td>
-                
+                <td><?php echo $data['id_pengguna']; ?></td>
                 <td><?php echo date("d-m-Y",strtotime($data['tanggal'])); ?></td>
                 <td><?php echo $data['status'] == 1 ? "<span class='text-success'>Publish</span>" : "<span class='text-warning'>Konsep</span>"; ?> </td>
 
