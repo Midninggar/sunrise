@@ -186,8 +186,14 @@
 
 
 <div class="container-fluid mt-4 mb-3 bg-gradient-primary shadow-primary border-radius-xl "  style="background-image: url('../assets/img/background-01.png'); background-size:cover; height: 80vh;">
-<div class="d-flex">
-<img src="../assets/img/logo.png" alt=""  style="width: 200px;" >
+<div class="d-flex align-items-center">
+
+<div class="row ">
+ <div class="col text-center text-shadow" style="margin-left: 600px; margin-top: 100px;"><img src="../assets/img/logo.png" alt=""  style="width: 200px;" >
+ <h1>Selamat Datang <br> <span> <?php echo $_SESSION["nama_pengguna"]; ?></span></h1>
+ </div>
+</div>
+
 </div>
 </div>
 
