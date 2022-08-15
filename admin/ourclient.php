@@ -186,32 +186,7 @@
 
 <!-- End Navbar -->
 
-<?php
-    if (isset($_GET['tambah'])) {
-        //Mengecek nilai variabel tambah 
-        if ($_GET['tambah']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di tambahkan!</div>";
-        }else if ($_GET['tambah']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di tambahkan!</div>";
-        }    
-    }
-    if (isset($_GET['edit'])) {
-        //Mengecek nilai variabel edit 
-        if ($_GET['edit']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di edit!</div>";
-        }else if ($_GET['edit']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di edit!</div>";
-        }    
-      }
-    if (isset($_GET['hapus'])) {
-        //Mengecek nilai variabel hapus 
-        if ($_GET['hapus']=='berhasil'){
-            echo"<div class='alert alert-success'><strong>Berhasil!</strong> admin telah di hapus!</div>";
-        }else if ($_GET['hapus']=='gagal'){
-            echo"<div class='alert alert-danger'><strong>Gagal!</strong> admin gagal di hapus!</div>";
-        }    
-    }
-    ?>
+
 
 <!-- Table Start -->
 <div class="container-fluid py-4">
