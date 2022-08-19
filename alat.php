@@ -95,26 +95,36 @@
           <p class="section-title px-5">
             <span class="px-2">Our</span>
           </p>
-          <h1 class="mb-4">Engineer</h1>
+          <h1 class="mb-4">Printing Offset</h1>
         </div>
 
           <div class=" owl-carousel testimonial-carousel bg-light ">
 
           
               <div class="carousel-item active">
-                <img src="assets/img/background-01.png" class="d-flex w-100" alt="">
+                <img src="assets/img/sorm72.png" class="d-flex w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
+                  <h3 class="text-light">Speed Master SM-72</h3>
+                  
                 </div>
               </div>
+
               <div class="carousel-item active">
-                <img src="assets/img/background-01.png" class="d-flex w-100" alt="">
+                <img src="assets/img/gto52.png" class="d-flex w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
+                  <h3 class="text-light">Speed Master SM-52</h3>
+                  
                 </div>
               </div>
+
+              <div class="carousel-item active">
+                <img src="assets/img/potong.png" class="d-flex w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3 class="text-light">Polar 115X</h3>
+                  
+                </div>
+              </div>
+
               </div>
 
               
