@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Agu 2022 pada 07.36
--- Versi server: 10.4.13-MariaDB
--- Versi PHP: 7.4.7
+-- Waktu pembuatan: 19 Agu 2022 pada 17.42
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,34 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `sunrise_db`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `komentar`
---
-
-CREATE TABLE `komentar` (
-  `id_komentar` int(11) NOT NULL,
-  `id_produk` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `isi_komentar` text NOT NULL,
-  `status_komentar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `komentar`
---
-
-INSERT INTO `komentar` (`id_komentar`, `id_produk`, `nama`, `email`, `isi_komentar`, `status_komentar`) VALUES
-(7, 0, 'Setiawan Dimas', 'arimurti295.sd@gmail.com', 'Saya terkagum membaca artikel ini karena setelah membaca artikel ini pikiran saya menjadi terbuka. Saya sadar, selama ini saya terlalu tertutup dengan hal-hal yang baru dan merasa sudah tahu. Hal ini berimbas kepada saya yakni saya menjadi orang yang Sok Tahu', 1),
-(8, 0, 'akil', 'sdfhhgjgh@gmail.com', 'sldjldshls sdhjndc ashjclsad', 0),
-(9, 0, 'akil', 'sdfhhgjgh@gmail.com', 'consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris', 0),
-(10, 0, 'akil', 'sdfhhgjgh@gmail.com', 'enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris', 0),
-(11, 105, 'akil', 'sdfhhgjgh@gmail.com', 'enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris', 0),
-(12, 101, 'akil', 'sdfhhgjgh@gmail.com', 'bagus', 1),
-(13, 120, 'hgda', 'lagsas@gmail.com', 'bagus', 1);
 
 -- --------------------------------------------------------
 
@@ -71,9 +43,7 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`id_message`, `nama`, `email`, `phone`, `company`, `website`, `pesan`, `tanggal`) VALUES
-(5, 'Mid', 'sdfhhgjgh@gmail.com', 2147483647, 'Midrobe', 'dfgdhdgfdgf.com', 'gdkdkcasad kahskakscsac', '2022-07-29 19:54:40'),
-(26, 'sark', 'Jeshmrwi@yahoo.com', 2147483647, 'sdsdsda', 'dfgdhdgfdgf.com', 'sgfsgfahfla', '2022-08-02 15:05:40'),
-(27, 'Mid', 'hamrosreymid@gmail.com', 2147483647, 'Midrobe', 'dfgdhdgfdgf.com', 'jsgfkhsdldvd', '2022-08-02 15:36:25');
+(5, 'Mid', 'sdfhhgjgh@gmail.com', 2147483647, 'Midrobe', 'dfgdhdgfdgf.com', 'gdkdkcasad kahskakscsac', '2022-07-29 19:54:40');
 
 -- --------------------------------------------------------
 
@@ -160,19 +130,11 @@ CREATE TABLE `produk` (
 INSERT INTO `produk` (`id_produk`, `kode_produk`, `judul_produk`, `deskripsi`, `gambar`, `tanggal`, `status`, `id_pengguna`) VALUES
 (124, 'A0124', 'Paperbag', 'dsakfhlfjsdf', 'Paperbag-01.png', '2022-08-02 10:40:07', 1, 0),
 (125, 'A0125', 'Kemasan Produk', 'dfsghjdgfsg', 'Kemasan Produk-01.png', '2022-08-02 10:40:29', 1, 0),
-(126, 'A0126', 'Amplop', 'dfsgdfshds', 'Amplop-01.png', '2022-08-02 10:40:50', 1, 0),
-(137, 'A0137', 'Buah buahan', 'regterg', 'Cylinder-Set-Master-45530KVY911.png', '2022-08-06 06:04:46', 1, 25),
-(136, 'A0131', 'smartphone', 'rdh', 'Cylinder-Set-Master-45530KVY911.jpg', '2022-08-06 04:41:11', 1, 21);
+(126, 'A0126', 'Amplop', 'dfsgdfshds', 'Amplop-01.png', '2022-08-02 10:40:50', 1, 0);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indeks untuk tabel `komentar`
---
-ALTER TABLE `komentar`
-  ADD PRIMARY KEY (`id_komentar`);
 
 --
 -- Indeks untuk tabel `message`
@@ -205,12 +167,6 @@ ALTER TABLE `produk`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
-
---
--- AUTO_INCREMENT untuk tabel `komentar`
---
-ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `message`
