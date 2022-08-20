@@ -93,11 +93,11 @@
            
             <div class="caption text-center mb-5">
             <h1><?php echo $data['judul_produk'];?></h1>
-
+<p style="text-align: left;">
                 <?php
                 echo strip_tags(html_entity_decode($data["deskripsi"],ENT_QUOTES,"ISO-8859-1"));
                  ?>
-                
+                </p>
             </div>
             <div class="text-center bg-light shadow rounded-pill">
             <a href="penawaran.php" class="btn  btn-primary shadow-sm w-50 my-2" role="button">Buat Penawaran</a>
@@ -123,7 +123,7 @@
                         <div class="col-lg-3">
                             <a  href="produk.php?halaman=produk&id=<?php echo $data['id_produk'];?>"><img src="assets/img/produk/<?php echo $data['gambar'];?>"  width="100%" alt="Gambar tidak ditemukan" class="bg-light rounded p-2" ></a>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9" style="text-align: left;">
                             <?php
                                 $ambil=$data["deskripsi"];
                                 $panjang = strip_tags(html_entity_decode($ambil,ENT_QUOTES,"ISO-8859-1"));

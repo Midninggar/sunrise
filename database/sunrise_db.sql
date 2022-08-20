@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Agu 2022 pada 17.42
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.1.1
+-- Waktu pembuatan: 20 Agu 2022 pada 07.45
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -128,9 +128,14 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `kode_produk`, `judul_produk`, `deskripsi`, `gambar`, `tanggal`, `status`, `id_pengguna`) VALUES
-(124, 'A0124', 'Paperbag', 'dsakfhlfjsdf', 'Paperbag-01.png', '2022-08-02 10:40:07', 1, 0),
-(125, 'A0125', 'Kemasan Produk', 'dfsghjdgfsg', 'Kemasan Produk-01.png', '2022-08-02 10:40:29', 1, 0),
-(126, 'A0126', 'Amplop', 'dfsgdfshds', 'Amplop-01.png', '2022-08-02 10:40:50', 1, 0);
+(138, 'A0001', 'Amplop', 'Cetak Amplop Anda dengan mesin dan sistem terbaru kami sehingga perusahaan anda terlihat profesional dan elegan. Cetak Amplop dengan mesin dan sistem terbaru kami yang dioperasikan oleh tenanga ahli yang terlatih dan berpengalaman mampu mebuat kop surat dengan hasil cetak dan kualitas kertas yang baik sehingga perusahaan anda terlihat profesional dan elegan. Kualitas dan kuantitas terjamin !!\r\n\r\nKami dapat mencetak Amplop untuk media pelengkap surat dari usaha anda yang membungkus pesan anda yang berisikan informasi mengenai invoice, surat tagihan atau keperluan bisnis lainnya. Amplop yang bagus dapat menambah nilai trust usaha anda karena ada identitas usaha anda dibagian cover amplop anda tesebut.\r\n\r\nkami menerima cetak Amplop baik untuk perorangan, ukm atau perusahan besar di Jakarta dan sekitarnya dengan beebagai macam design dan style kami dapat mencetak Amplop usaha anda di berbagai macam bentuk dan ukuran yang disesuaikan dengan design branding usaha anda.', 'Amplop-01.png', '2022-08-20 04:55:28', 1, 21),
+(139, 'A0139', 'Hampers', 'desgdf', 'Hampers-01.png', '2022-08-20 05:33:28', 1, 21),
+(140, 'A0140', 'Paperbag', 'swf', 'Paperbag-01.png', '2022-08-20 05:34:05', 1, 21),
+(141, 'A0141', 'Kertas Roti', 'dsrf', 'Kertas Roti-01.png', '2022-08-20 05:34:23', 1, 21),
+(142, 'A0142', 'Catalog', 'ds', 'Catalog-01.png', '2022-08-20 05:35:12', 1, 25),
+(143, 'A0143', 'Book &amp; Cover', 'swrg', 'Buku & Cover-01.png', '2022-08-20 05:35:48', 1, 25),
+(144, 'A0144', 'Kemasan Kosmetik', 'sdg', 'Kemasan Kosmetik-01.png', '2022-08-20 05:36:09', 1, 25),
+(145, 'A0145', 'Kemasan Produk', 'sdv', 'Kemasan Produk-01.png', '2022-08-20 05:36:48', 1, 25);
 
 --
 -- Indexes for dumped tables
@@ -190,7 +195,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
